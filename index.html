@@ -1,0 +1,663 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+        integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+        integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+        integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="assets/style.css">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+        <div class="container">
+
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="#">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">About us</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">contact</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                            aria-expanded="false">
+                            FAQ
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="#">Action</a></li>
+                            <li><a class="dropdown-item" href="#">Another action</a></li>
+                            <li>
+                                <hr class="dropdown-divider">
+                            </li>
+                            <li><a class="dropdown-item" href="#">Something else here</a></li>
+                        </ul>
+                    </li>
+                </ul>
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0 d-flex">
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                            aria-expanded="false">
+                            ENGLISH
+                        </a>
+                    <li a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                        aria-expanded="false">
+                        $ US DOLLAR
+                        </a>
+                </ul>
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0 d-flex">
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                            aria-expanded="false">
+                            More menus
+                        </a>
+                    <li a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                        aria-expanded="false">
+                        Delievery
+                        </a>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container  p-4">
+        <div class="row">
+            <div class="col-md-3">
+                <h1>JOURNAL</h1>
+            </div>
+
+            <div class="col-md-4 pt-2">
+                <div class="wrap">
+                    <div class="search">
+                        <input type="text" class="searchTerm" placeholder="What are you looking for?">
+                        <button type="submit" class="searchButton">
+                            <i class="fa fa-search"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+
+
+            <div class="col-md-3 customnav">
+                <ul class="nav  ">
+                    <li> <i class="fa-solid fa-user"></i><br>
+                        login
+                    </li>
+                    <li><i class="fa-solid fa-registered"></i><br>
+                        register
+                    </li>
+                    <li>
+                        <i class="fa-regular fa-heart"></i><br>wishlist
+                    </li>
+                    <li>
+                        <i class="fa-solid fa-user"></i><br>compare
+                    </li>
+                </ul>
+            </div>
+            <div class="d-flex col-md-2 nav">
+                <span>0 item(s)- $0.00</span> <i class=" fa-solid fa-cart-shopping"></i>
+            </div>
+        </div>
+
+    </div>
+
+    </div>
+
+
+    <div class="container-fluid department top-nav">
+        <div class="row">
+            <div class="col-md-2 dep text-center">
+                <i class="fa-solid fa-bars"></i> all department
+            </div>
+            <div class="col-md-5 nav p-4 multi">
+                <li>MULTILEVEL </li>
+                <li>MULTILEVEL </li>
+                <li>MULTILEVEL </li>
+            </div>
+            <div class="col-md-2 multi">
+                <i class="fa fa-phone-volume"></i>
+                8.8898080980
+            </div>
+            <div class="col-md-1 dep text-center">
+                BLOG
+            </div>
+        </div>
+    </div>
+<section>
+    <div class="container">
+        <div class="row">
+          <div class="col-md-8 color">
+          <div class="container1">
+              <div class="slider">
+                  <div class="slide slide1">
+                      <div class="caption">
+                          <button type="button" class="btn btn-primary"
+              style="--bs-btn-padding-y: .25rem; --bs-btn-padding-x: .5rem; --bs-btn-font-size: .75rem;">
+        Custom button
+      </button>
+                          <h2>Slide1</h2>
+                          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. </p>
+                         
+                      </div>
+                  </div>
+                  <div class="slide slide2">
+                      <div class="caption">
+                          <h2>Slide2</h2>
+                          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. </p>
+                      </div>
+                  </div>
+                  <div class="slide slide3">
+                      <div class="caption">
+                          <h2>Slide3</h2>
+                          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. .</p>
+                      </div>
+                  </div>
+                
+                  <div class="slide slide1">
+                      <div class="caption">
+                          <h2>Slide1</h2>
+                          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                      </div>
+                  </div>
+      
+              </div>
+      
+          </div>
+         
+      </div>
+      <div class="col-md-4">
+          <div class="container conter">
+          <div class="slidee slide1">
+              <div class="caption">
+                  <h1>Slide1</h1>
+              
+              </div>
+          </div>
+          <div class="slidee slide2">
+              <div class="caption">
+                  <h1>Slide1</h1>
+      
+              </div>
+          </div>
+      </div>
+      </div>
+      </div>
+      </div>
+</section>
+    
+    <section>
+        <!-- 1.Free shiping  -->
+        <div class="container-fluid text-center shipping">
+            <div class="free-shiping-container row">
+                <div class="col-md-3">
+                    <div class="icon-container">
+                        <div class="icon">
+                            <i class="fa-solid fa-truck-fast"></i>
+                        </div>
+
+                        <div class="text">
+                            <h2>Free Shipping</h2>
+                            <p>Free delivery over $100</p>
+                        </div>
+                    </div>
+                </div>
+
+
+                <!-- 2.Free returns  -->
+
+
+                <div class="col-md-3">
+                    <div class="icon-container">
+                        <div class="icon">
+                            <i class="fa-solid fa-arrow-rotate-left"></i>
+                        </div>
+                        <div class="text">
+                            <h2>Free Shipping</h2>
+                            <p>Free delivery over $100</p>
+                        </div>
+                    </div>
+
+                </div>
+
+                <!-- 3.Secure shoping -->
+
+
+                <div class="col-md-3">
+                    <div class="icon-container">
+                        <div class="icon">
+                            <i class="fa-solid fa-shield-halved"></i>
+                        </div>
+
+                        <div class="text">
+                            <h2>Free Shipping</h2>
+                            <p>Free delivery over $100</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 4.Unlimited Blocks -->
+
+
+                <div class="col-md-3">
+                    <div class="icon-container">
+                        <div class="icon">
+                            <i class="fa-solid fa-cube"></i>
+                        </div>
+
+                        <div class="text">
+                            <h2>Free Shipping</h2>
+                            <p>Free delivery over $100</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <section>
+        <div class="container-fluid text-center why-buy">
+            <h1>why buy from us ?</h1>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima doloremque nesciunt iure quasi maiores
+                perferendis
+                iste labore inventore numquam itaque!</p>
+            <p>Lorem ipsum, dolor sit amet consectetur adipisicing <a href="#">learn more</a></p>
+            <div class="container text-center">
+                    <div id = "product-list-3" class="d-flex">
+                       
+                    </div>
+              
+              
+              </div>
+        </div>
+    </section>
+    
+    <section>
+
+
+
+        <div class="container text-center">
+            <h1>Feature Product</h1>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima doloremque nesciunt iure quasi maiores
+                perferendis
+                iste labore inventore numquam itaque!</p>
+            <p>Lorem ipsum, dolor sit amet consectetur adipisicing <a href="#">learn more</a></p>
+            
+        </div>
+
+
+        <div class="container-fluid">
+            <div class="text-center">
+                <h2 class="display-7">PRODUCTS</h2>
+            </div>
+            <div class="row d-flex">
+                <ul id="home_products" class="d-flex">
+
+                </ul>
+            </div>
+
+        </div>
+        <script src="main.js"></script>
+
+        <section>
+
+            <div class="container-fluid text-center top-nav">
+                <h1>featured product</h1>
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Magni laboriosam accusantium provident quod
+                    voluptas? Natus earum quasi labore quidem vel?</p>
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit.</p>
+               <div id="home_products_2" class="d-flex">
+                
+               </div>
+            </div>
+
+        </section>
+        <section>
+            <div class="container-fluid text-center p-4">
+                <h1> shop by brands </h1>
+                <div class="row brands ">
+                    <div class="col-md-2">
+                        <div class="card cus-card">
+                            <img src="assets/sony_logo_PNG3.png" alt="...">
+                        </div>
+                    </div>
+                    <div class="col-md-2">
+                        <div class="card cus-card">
+                            <img src="assets/carrera.png" alt="...">
+                        </div>
+                    </div>
+                    <div class="col-md-2">
+                        <div class="card cus-card">
+                            <img src="assets/nike.png" alt="...">
+                        </div>
+                    </div>
+                    <div class="col-md-2">
+                        <div class="card cus-card">
+                            <img src="assets/ny.png" alt="...">
+                        </div>
+                    </div>
+                    <div class="col-md-2">
+                        <div class="card cus-card">
+                            <img src="assets/sony_logo_PNG3.png" alt="...">
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+        </section>
+        <!-- improved gallery modules -->
+        <section>
+            <div class="container-fluid improved text-center p-4">
+                <h1>Improve Gallery Module</h1>
+
+
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Officiis, distinctio nam nemo reiciendis
+                    expedita nihil iusto, exercitationem sint accusamus ipsum saepe! Nam obcaecati explicabo hic, ab
+                    officia
+                    saepe dolorum blanditiis
+                    laudantium aut expedita consectetur modi facilis iusto sequi assumenda rem ipsum dolor sit amet </p>
+
+                <div class="row brands p-4">
+                    <div class="col-md-1">
+                        <div class="card">
+                            <img src="assets/g3.jpeg" alt="...">
+                        </div>
+                    </div>
+                    <div class="col-md-1">
+                        <div class="card">
+                            <img src="assets/g9.jpeg" alt="...">
+                        </div>
+                    </div>
+                    <div class="col-md-1">
+                        <div class="card">
+                            <img src="assets/g8.jpeg" alt="...">
+                        </div>
+                    </div>
+                    <div class="col-md-1">
+                        <div class="card">
+                            <img src="assets/g9.jpeg" alt="...">
+                        </div>
+                    </div>
+                    <div class="col-md-1">
+                        <div class="card">
+                            <img src="assets/g3.jpeg" alt="...">
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+        </section>
+        <section>
+            <div class="container text-center p-4">
+                <h1>from our blog</h1>
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Similique expedita facilis incidunt tempora
+                    cupiditate, enim quod nisi sed. Magnam, facere.
+                </p>
+
+
+                <div class="row from-our-blog ">
+                    <div class="col-md-4 ">
+                        <div class="card h-100">
+                            <img src="assets/bags.jpg" height="400px">
+                            <div class="card-body">
+                                <div class=" admin-icon">
+                                    <i class="fa-solid fa-user"></i>
+                                    <p>admin</p>
+                                    <i class="fa-regular fa-comment-dots"></i>
+                                    <p>38</p>
+                                    <i class="fa-solid fa-eye"></i>
+                                    <p>19340</p>
+                                </div>
+                                <h5 class="card-title">Another Blog post</h5>
+                                <p class="card-text">This is a wider card with supporting text below as a natural
+                                    lead-in to
+                                    additional content. This content is a little bit longer.</p>
+                            </div>
+
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="card h-100">
+                            <img src="assets/bags.jpg" height="400px">
+                            <div class="card-body">
+                                <div class=" admin-icon">
+                                    <i class="fa-solid fa-user"></i>
+                                    <p>admin</p>
+                                    <i class="fa-regular fa-comment-dots"></i>
+                                    <p>38</p>
+                                    <i class="fa-solid fa-eye"></i>
+                                    <p>19340</p>
+                                </div>
+                                <h5 class="card-title">Best Leather Bags</h5>
+                                <p class="card-text">This card has supporting text below as a natural lead-in to
+                                    additional
+                                    content.</p>
+                            </div>
+
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="card h-100">
+                            <img src="assets/bags.jpg" height="400px">
+                            <div class="card-body">
+                                <div class=" admin-icon">
+                                    <i class="fa-solid fa-user"></i>
+                                    <p>admin</p>
+                                    <i class="fa-regular fa-comment-dots"></i>
+                                    <p>38</p>
+                                    <i class="fa-solid fa-eye"></i>
+                                    <p>19340</p>
+                                </div>
+                                <h5 class="card-title">Journal Blog is Here</h5>
+                                <p class="card-text">This is a wider card with supporting text below as a natural
+                                    lead-in to
+                                    additional content. This card has even longer content than the first to show that
+                                    equal
+                                    height action.</p>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section>
+            <div class="container-fluid what-people text-center p-4">
+                <h1>what people are saying about us?</h1>
+                <div class="row text-center">
+                    <div class="col-md-4">
+                        <div class="content">
+                            <div class="quote-icon p-4">
+                                <i class="fa-solid fa-quote-left "></i>
+                            </div>
+                            <p>
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem dicta vero vitae mollitia
+                                quasi a
+                                numquam inventore consectetur amet nobis.</p>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="content">
+                            <div class="quote-icon p-4">
+                                <i class="fa-solid fa-quote-left "></i>
+                            </div>
+                            <p>
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem dicta vero vitae mollitia
+                                quasi a
+                                numquam inventore consectetur amet nobis.</p>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="content">
+                            <div class="quote-icon p-4">
+                                <i class="fa-solid fa-quote-left "></i>
+                            </div>
+                            <p>
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem dicta vero vitae mollitia
+                                quasi a
+                                numquam inventore consectetur amet nobis.</p>
+                        </div>
+                    </div>
+
+                </div>
+
+
+            </div>
+
+
+        </section>
+        <div class="most-viewed container-fluid">
+            <div class="row">
+                <div class="col-md-3 d-flex ">
+
+                    <div class="images">
+                        <img src="assets/fashion.jpeg" height="120px" width="100px" />
+                    </div>
+                    <div class="name">
+                        <p>Oversized Sunglasses For Lon...<br>$397.00</p>
+                        <p><i class="fa-solid fa-cart-shopping"></i> <i class="fa-regular fa-heart"></i> <i
+                                class="fa-solid fa-arrow-right-arrow-left"></i></p>
+                    </div>
+                </div>
+
+                <div class=" col-md-3 d-flex">
+
+                    <div class="images">
+                        <img src="assets/footwear.jpeg" height="120px" width="100px" />
+                    </div>
+                    <div class="name">
+                        <p>Oversized Sunglasses For Lon...<br>$397.00</p>
+                        <p><i class="fa-solid fa-cart-shopping"></i> <i class="fa-regular fa-heart"></i> <i
+                                class="fa-solid fa-arrow-right-arrow-left"></i></p>
+                    </div>
+                </div>
+                <div class=" col-md-3 d-flex">
+
+                    <div class="images">
+                        <img src="assets/bags.jpg" height="120px" width="100px" />
+                    </div>
+                    <div class="name">
+                        <p>Oversized Sunglasses For Lon...<br>$397.00</p>
+                        <p><i class="fa-solid fa-cart-shopping"></i> <i class="fa-regular fa-heart"></i> <i
+                                class="fa-solid fa-arrow-right-arrow-left"></i></p>
+                    </div>
+                </div>
+                <div class="col-md-3 d-flex">
+
+                    <div class="images">
+                        <img src="assets/beauty.jpg" height="120px" width="100px" />
+                    </div>
+                    <div class="name">
+                        <p>Oversized Sunglasses For Lon...<br>$397.00</p>
+                        <p><i class="fa-solid fa-cart-shopping"></i> <i class="fa-regular fa-heart"></i> <i
+                                class="fa-solid fa-arrow-right-arrow-left"></i></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <section>
+            <div class="social-media-icons container ">
+                <p>
+                    <a href="#"><i class="fa-brands fa-facebook"></i></a>
+                    <a href="#"><i class="fa-brands fa-twitter"></i></a>
+                    <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="#"> <i class="fa-brands fa-linkedin"></i></a>
+                    <a href="#"> <i class="fa-brands fa-youtube"></i></a>
+                    <a href="#"> <i class="fa-brands fa-skype"></i></a>
+                    <a href="#"> <i class="fa-brands fa-google-plus-g"></i></a>
+
+                </p>
+            </div>
+        </section>
+
+
+        <footer class="container">
+            <div class="row">
+                <div class="col-md-3">
+                    <h2>About Us</h2>
+                    <hr>
+                    <ul>
+                        <li><a href="#">About Us</a></li>
+                        <li><a href="#">Delivery</a></li>
+                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="#">Terms & Condition</a></li>
+                        <li><a href="#">Custom Links</a></li>
+                    </ul>
+                </div>
+
+
+                <div class="col-md-3">
+                    <h2>Customer Service</h2>
+                    <hr>
+                    <ul>
+                        <li><a href="#">Contact</a></li>
+                        <li><a href="#">Returns</a></li>
+                        <li><a href="#">Site Map</a></li>
+                        <li><a href="#">Brands</a></li>
+                        <li><a href="#">Unlimited Links</a></li>
+                    </ul>
+                </div>
+
+
+
+                <div class="col-md-3">
+                    <h2>My Account</h2>
+                    <hr>
+                    <ul>
+                        <li><a href="#">My Account</a></li>
+                        <li><a href="#">Order History</a></li>
+                        <li><a href="#">Affiliats</a></li>
+                        <li><a href="#">Newslatter</a></li>
+                        <li><a href="#">Gifts Certificates</a></li>
+                    </ul>
+                </div>
+
+                <div class="col-md-3">
+                    <h2>Newsletter</h2>
+                    <hr>
+                    <p class="para">Stay up to date with news and promotions by signing up for promotions</p>
+
+                    <div class="input-container"> <input type="email" placeholder="Your email">
+                        <button><i class="fa-regular fa-envelope"></i> Send</button>
+                    </div>
+                    <p> <input type="checkbox" name="" id=""> I have read and aggry to the <a href="#">Privacy
+                            Policy</a>
+                    </p>
+                </div>
+
+            </div>
+
+        </footer>
+
+
+</body>
+
+</html>
