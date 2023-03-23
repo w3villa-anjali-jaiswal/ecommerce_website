@@ -1,0 +1,60 @@
+{
+   "products":[
+
+    {  "id":1,
+         "img":"assets-product/camera.jpg",
+        "name"  : "Camera",
+        "model" : "Model 123",
+        "price" : "$999.00" ,
+        "cutprice" : "$999.00",
+        "brand" : "Erickson" ,
+        "sale" : "-40%",
+        "badge" : "Sale 50% off"
+    },
+    {
+        "id":2,
+        "img":"assets-product/headphone.jpg",
+        "name"  : "Headphones",
+        "model" : "Model 123",
+        "price" : "$100.00" ,
+        "cutprice" :"$500.00",
+        "brand" : "Erickson" ,
+        "sale" : "-30%",
+        "badge" : "Sale 70% off"
+    },
+    { 
+        "id":3,  
+    "img":"assets-product/g5.jpeg",
+        "name"  : "Shoes",
+        "model" : "Model 123",
+        "price" : "$100.00" ,
+        "cutprice" : "$10.00",
+        "brand" : "Erickson" ,
+        "sale" : "-70%",
+        "badge" : "Sale 50% off"
+    },
+    {
+        "id":4,
+        "img":"assets-product/headphone.jpg",
+        "name"  : "Headphones",
+        "model" : "Model 123",
+        "price" : "$100.00" ,
+        "cutprice" :"$500.00",
+        "brand" : "Erickson" ,
+        "sale" : "-30%",
+        "badge" : "Sale 70% off"
+    },
+    {
+        "id":5,
+      "img":"assets-product/camera.jpg",
+      "name"  : "Camera",
+      "model" : "Model 123",
+      "price" : "$100.00" ,
+      "cutprice" :"$500.00",
+      "brand" : "Erickson" ,
+      "sale" : "-40%",
+      "badge" : "Sale 70% off"
+  }
+    
+   ]
+}
