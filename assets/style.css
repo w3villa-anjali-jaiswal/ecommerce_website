@@ -461,21 +461,21 @@ body {
 }
 
 .car-container .slider .slide.slide1 {
-    background: url("/assets/phone.jpg");
+    background: url("../assets/phone.jpg");
     background-position: right;
     background-repeat: no-repeat;
     background-size: cover;
 }
 
 .car-container .slider .slide.slide2 {
-    background: url("/assets/images.jpeg");
+    background: url("../assets/images.jpeg");
     background-position: right;
     background-repeat: no-repeat;
     background-size: cover;
 }
 
 .car-container .slider .slide.slide3 {
-    background: url("/assets/caraousal.png");
+    background: url("../assets/caraousal.png");
     background-position: right;
     background-repeat: no-repeat;
     background-size: cover;
