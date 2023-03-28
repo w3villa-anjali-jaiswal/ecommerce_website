@@ -4,10 +4,15 @@
 
 * {
 
-    padding: 0;
-    margin: 0;
+    padding: 0%;
+    margin: 0% ;
 }
-
+body{
+    width: 100vw !important;
+    padding: 0%;
+    margin: 0% ;
+    overflow-x: hidden;
+}
 #journal {
     text-transform: uppercase;
     font-weight: bolder;
@@ -461,21 +466,21 @@ body {
 }
 
 .car-container .slider .slide.slide1 {
-    background: url(../assets/phone.jpg);
+    background: url("/assets/phone.jpg");
     background-position: right;
     background-repeat: no-repeat;
     background-size: cover;
 }
 
 .car-container .slider .slide.slide2 {
-    background: url("../assets/images.jpeg");
+    background: url("/assets/images.jpeg");
     background-position: right;
     background-repeat: no-repeat;
     background-size: cover;
 }
 
 .car-container .slider .slide.slide3 {
-    background: url("../assets/caraousal.png");
+    background: url("/assets/caraousal.png");
     background-position: right;
     background-repeat: no-repeat;
     background-size: cover;
@@ -582,12 +587,33 @@ body {
     border-radius: 7px;
 
 }
-
+#wear{
+    color: #0d51d6;
+}
+#intelligent{
+    color: #535456;
+    font-size: 20px;
+}
 
 @media (max-width: 790px) {
 .car-container img {
     height: 166px;
+    position: relative;
+    top: -19%;
+    left: 19%;
  
+}
+#wear{
+    color: #0d51d6;
+    position: absolute;
+    z-index:1;
+}
+#intelligent{
+    color:#535456;
+    position: relative;
+    z-index:1;   
+    font-size: 20px;
+    top: 132%;
 }
 }
 /* top-part  navbar*/
