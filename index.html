@@ -12,6 +12,13 @@
     <!-- bootstrap link -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+
+
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  
+
+
     <!-- font awsome link -->
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
@@ -217,8 +224,7 @@
                                     <li><a class="dropdown-item" href="#">Something else here</a></li>
                                 </ul>
 
-                                <input class="form-control " id="search-box" type="search" placeholder="Search here..."
-                                    aria-label="Search">
+                                <input class="form-control" id="search-box" type="search" placeholder="Search here...">
 
 
                         </div>
@@ -241,7 +247,7 @@
                     <span class="navbar-toggler-icon"></span>
                 </button>
                 <div class="collapse navbar-collapse" id="navbarSupportedContent1">
-                    <ul class="navbar-nav me-auto mb-2 mb-lg-0" id="icons">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0 " id="icons">
                         <li class="nav-item">
                             <a class="nav-link" href="#">
                                 <div class="fas fa-user" onclick="document.getElementById('id01').style.display='block'"
@@ -317,548 +323,693 @@
     </div>
 
 
-    <!--********************* CARAOUSAL SECTION ************************-->
+    <!-- searchbar in new page -->
 
-    <div class="car-container  container-fluid comm-padding">
-        <div class="row">
-            <div class="col-md-8 color">
-                <div class="container1">
-                    <div class="slider">
-                        <div class="slide slide1">
-                            <div class="caption">
-                                <button type="button" class="btn btn-primary"
-                                    style="--bs-btn-padding-y: .35rem; --bs-btn-padding-x: .5rem; --bs-btn-font-size: .95rem;">
-                                    watch
-                                </button>
+    <div class="container-fluid " >
+        <div class="row d-flex">
+            <div class="col-md-3 " id="filter-section">
+                <h1>Search-camera</h1>
+                <hr>
+                <div class="filter">
+                    <h3>Filter</h3>
+                    <button><i class="fa-sharp fa-solid fa-circle-xmark"></i> Clear</button>
+                </div>
+                <br>
 
-                                <h1>Best Watch options at any resolution</h1>
-                                <div class="learn-more">
-                                    <p>learn more</p>
-                                </div>
-
-                            </div>
-                        </div>
-                        <div class="slide slide2">
-                            img
-                            <div class="caption">
-
-                                <button type="button" class="btn btn-primary"
-                                    style="--bs-btn-padding-y: .35rem; --bs-btn-padding-x: .5rem; --bs-btn-font-size: .95rem;">
-                                    watch
-                                </button>
-
-                                <h1>Best Watch options at any resolution</h1>
-                                <div class="learn-more">
-                                    <p>learn more</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="slide slide3">
-                            <div class="caption">
-
-                                <button type="button" class="btn btn-primary"
-                                    style="--bs-btn-padding-y: .35rem; --bs-btn-padding-x: .5rem; --bs-btn-font-size: .95rem;">
-                                    watch
-                                </button>
-
-                                <h1>Best Watch options at any resolution</h1>
-                                <div class="learn-more">
-                                    <p>learn more</p>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="slide slide1">
-                            <div class="caption">
-
-                                <button type="button" class="btn btn-primary"
-                                    style="--bs-btn-padding-y: .35rem; --bs-btn-padding-x: .5rem; --bs-btn-font-size: .95rem;">
-                                    watch
-                                </button>
-
-                                <h1>Best Watch options at any resolution</h1>
-                                <div class="learn-more ">
-                                    <p>learn more</p>
-                                </div>
-                            </div>
-                        </div>
-
+                <div class="title_panel">
+                    <h6>PRICE</h6>
+                    <a href="#" onclick="minusfunc()">
+                        <h2>-</h2>
+                    </a>
+                </div>
+                <div id="price_content">
+                    <input id="range_tggl" type="range" min="10" max="10000">
+                    <div class="price_input">
+                        <a>$<input type="text" value="10"></a>
+                        <a>$<input id="max" type="text"></a>
                     </div>
-
                 </div>
 
+
+
+                <hr>
+                <div class="title_panel">
+                    <h6>AVAILABILITY</h6>
+                    <a href="#" onclick="minusfunc()">
+                        <h2>-</h2>
+                    </a>
+                </div>
+
+                <div id="price_content">
+                    <a><input type="checkbox">Out Of Stock</a>
+                </div>
+                <hr>
+
+                <div class="title_panel">
+                    <h6>SUBCATEGORIES</h6>
+                    <h2>-</h2>
+                </div>
+                <div id="price_content">
+                    <a><img src="assets/g3.jpeg" width="100px" height="100px"> Electronics</a>
+                </div>
+                <hr>
+                <div class="title_panel">
+                    <h6>BRANDS</h6>
+                    <h2>-</h2>
+                </div>
+                <div id="price_content">
+                    <a><img src="assets/g8.jpeg" width="100px" height="100px"></a>
+                </div>
+                <hr>
+                <div class="title_panel">
+                    <h6>NO. OF CORES</h6>
+                    <h2>-</h2>
+                </div>
+                <div id="price_content">
+                    <a><input type="checkbox">4</a>
+                </div>
+
+
+
+               
             </div>
-            <div class="col-md-4">
-                <div class="car-container">
-                    <div class="slidee slide1">
-                        <div class="caption row d-flex">
-                            <div class="col-md-6 ">
-                                <h1 id="wear" > wearables</h1>
-                                <p id="intelligent">Intelligent & Durable Design</p>
-                            </div>
-
-                            <div class="col-md-6">
-                                <img src="assets/computer.png" alt="">
-                            </div>
-
-
-                        </div>
+           
+      
+        <div class=" col-md-9 mt-4 hide-sec1">
+            <div class="right col-md-10 " style="width: 65%;">
+                <div class="input-field d-flex">
+                    <div class="inputs">
+                        <input type="text" name="search" value="camera" placeholder="Keywords" id="input-search"
+                            class="form-control">
                     </div>
-                    <div class="slidee slide2">
-                        <div class="caption row">
-                            <div class="col-md-5">
-                                <h1 id="wear">computer</h1>
-                                <p id="intelligent">Intelligent & Durable Design</p>
-                            </div>
-                            <div class="col-md-7">
-                            <img src="assets/watch.png" alt="">
-                            </div>
+                    <div class="dropdown ml-4">
+                        <select class="select">
+                            <option>All</option>
+                            <option>Option 1</option>
+                            <option>Option 2</option>
+                            <option>Option 3</option>
+                            <option>Option 4</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="checkbox">
+                    <label class="checkbox-inline">
+                        <input type="checkbox" name="sub_category" value="1" disabled="">
+                        Search in subcategories</label>
+                </div>
+                <div class="checkbox2">
+                    
+                    <label class="checkbox-inline">
+                        <input type="checkbox" name="sub_category" value="1" disabled="">
+                        Search in Product description</label>
+                </div>
+                <div class="search-btn">
+                    <button>Search</button>
+                </div>
+                <h3>Products meeting the search criteria</h3>
+                <hr>
+                <div class="d-flex" style="justify-content: space-between;">
+                    <div class="d-flex">
+                        <i class="fas fa-th" style="font-size: 25px;"></i>&nbsp; &nbsp; <i class="fas fa-list fa"
+                            style="font-size: 25px;"></i> &nbsp; &nbsp;
+                        <i class="fa-solid fa-arrow-right-arrow-left compare" style="font-size: 20px;"></i> &nbsp;&nbsp;<p
+                            style="color: blue; font-size: 25px;"> Product compare</p>
+                    </div>
+                    <div class="d-flex mt-2">
+                        <div class="dropdown">
+                            <label
+                                style="background-color: lightgray; border: 1px solid lightgray; border-radius: 3px; padding: 1px;">Sort
+                                By: </label>
+                            <select style="width: 8vw;">
+                                <option>Default</option>
+                                <option>Option 1</option>
+                                <option>Option 2</option>
+                                <option>Option 3</option>
+                                <option>Option 4</option>
+                            </select>
+                        </div>
+                        &nbsp;
+                        <div class="dropdown">
+                            <label
+                                style="background-color: lightgray; border: 1px solid lightgray; border-radius: 3px; padding: 1px;">Show:
+                            </label>
+        
+                            <select>
+                                <option>12</option>
+                                <option>Option 1</option>
+                                <option>Option 2</option>
+                                <option>Option 3</option>
+                                <option>Option 4</option>
+                            </select>
                         </div>
                     </div>
                 </div>
+                <hr>
+            </div>
+            <div class="col-md-9  search-section  d-flex" id="search-item-wrap">
+
             </div>
         </div>
+
+
+       
+       
     </div>
 
 
-    <section>
-        <!-- 1.Free shiping  -->
-        <div class="container-fluid text-center shipping">
-            <div class="free-shiping-container row">
-                <div class="col-md-3">
-                    <div class="icon-container">
-                        <div class="icon">
-                            <i class="fa-solid fa-truck-fast"></i>
-                        </div>
-
-                        <div class="text">
-                            <h2>Free Shipping</h2>
-                            <p>Free delivery over $100</p>
-                        </div>
-                    </div>
-                </div>
-
-
-                <!-- 2.Free returns  -->
-
-
-                <div class="col-md-3">
-                    <div class="icon-container">
-                        <div class="icon">
-                            <i class="fa-solid fa-arrow-rotate-left"></i>
-                        </div>
-                        <div class="text">
-                            <h2>Free Shipping</h2>
-                            <p>Free delivery over $100</p>
-                        </div>
-                    </div>
-
-                </div>
-
-                <!-- 3.Secure shoping -->
-
-
-                <div class="col-md-3">
-                    <div class="icon-container">
-                        <div class="icon">
-                            <i class="fa-solid fa-shield-halved"></i>
-                        </div>
-
-                        <div class="text">
-                            <h2>Free Shipping</h2>
-                            <p>Free delivery over $100</p>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- 4.Unlimited Blocks -->
-
-
-                <div class="col-md-3">
-                    <div class="icon-container">
-                        <div class="icon">
-                            <i class="fa-solid fa-cube"></i>
-                        </div>
-
-                        <div class="text">
-                            <h2>Free Shipping</h2>
-                            <p>Free delivery over $100</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-
-    <section>
-        <div class="container-fluid text-center why-buy ">
-            <h1>why buy from us ?</h1>
-            <p class="para">Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima doloremque nesciunt iure
-                quasi maiores
-                perferendis
-                iste labore inventore numquam itaque!</p>
-            <p class="para">Lorem ipsum, dolor sit amet consectetur adipisicing <a href="#">learn more</a></p>
-
-            <div class="categories-navigation-container">
-                <a>
-                    <p class="active-why-buy">
-                        top categories
-                    </p>
-                </a>
-
-                <a>
-                    <p>electronics</p>
-                </a>
-                <a>
-                    <p>beauty</p>
-                </a>
-                <a>
-                    <p>fashion</p>
-                </a>
-            </div>
-
-            <div class="container-fluid text-center comm-padding">
-                <div id="product-list-3" class="d-flex">
-
-                </div>
-
-
-            </div>
-        </div>
-    </section>
-
-    <section>
 
 
 
-        <div class="container text-center">
-            <h1>Feature Product</h1>
-            <p class="para">Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima doloremque nesciunt iure
-                quasi maiores
-                perferendis
-                iste labore inventore numquam itaque!</p>
-            <p class="para">Lorem ipsum, dolor sit amet consectetur adipisicing <a href="#">learn more</a></p>
 
-        </div>
-        <div class="categories-navigation-container">
-            <a>
-                <p class="active-why-buy">
-                    top categories
-                </p>
-            </a>
+        <!-- *********************** CARAOUSAL SECTION ************************ -->
 
-            <a>
-                <p>electronics</p>
-            </a>
-            <a>
-                <p>beauty</p>
-            </a>
-            <a>
-                <p>fashion</p>
-            </a>
-        </div>
+        <div class="hide-sec">
 
-        <div class="container-fluid comm-padding" id="product">
-            <div class="text-center">
-                <h2 class="display-7">PRODUCTS</h2>
-            </div>
-            <div class="row d-flex">
-                <ul id="home_products" class="d-flex">
+            <div class="car-container  container-fluid comm-padding">
+                <div class="row">
+                    <div class="col-md-8 color">
+                        <div class="container1">
+                            <div class="slider">
+                                <div class="slide slide1">
+                                    <div class="caption">
+                                        <button type="button" class="btn btn-primary"
+                                            style="--bs-btn-padding-y: .35rem; --bs-btn-padding-x: .5rem; --bs-btn-font-size: .95rem;">
+                                            watch
+                                        </button>
 
-                </ul>
-            </div>
+                                        <h1>Best Watch options at any resolution</h1>
+                                        <div class="learn-more">
+                                            <p>learn more</p>
+                                        </div>
 
-        </div>
-        <script src="main.js"></script>
-
-        <section>
-
-            <div class="container-fluid text-center comm-padding ">
-                <h1>featured category</h1>
-                <p class="para">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Magni laboriosam accusantium
-                    provident quod
-                    voluptas? Natus earum quasi labore quidem vel?</p>
-                <p class="para">Lorem ipsum dolor, sit amet consectetur adipisicing elit.</p>
-                <div id="home_products_2" class="d-flex">
-
-                </div>
-            </div>
-
-        </section>
-        <section>
-            <div class="container-fluid  text-center ">
-                <h1> shop by brands </h1>
-                <div class="row cus-row">
-                    <div class="col-md-2  cus-card">
-
-                        <img src="assets/sony_logo_PNG3.png" alt="...">
-
-                    </div>
-                    <div class="col-md-2 cus-card">
-
-                        <img src="assets/carrera.png" alt="...">
-
-                    </div>
-                    <div class="col-md-2 cus-card">
-
-                        <img src="assets/nike.png" alt="...">
-
-                    </div>
-                    <div class="col-md-2 cus-card">
-
-                        <img src="assets/ny.png" alt="...">
-
-                    </div>
-                    <div class="col-md-2 cus-card">
-
-                        <img src="assets/sony_logo_PNG3.png" alt="...">
-
-                    </div>
-                    <div class="col-md-2 cus-card">
-
-                        <img src="assets/sony_logo_PNG3.png" alt="...">
-                    </div>
-                </div>
-
-            </div>
-
-        </section>
-        <!-- improved gallery modules -->
-        <!-- <section>
-            <div class="container-fluid improved text-center p-4">
-                <h1>Improve Gallery Module</h1>
-
-
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Officiis, distinctio nam nemo reiciendis
-                    expedita nihil iusto, exercitationem sint accusamus ipsum saepe! Nam obcaecati explicabo hic, ab
-                    officia
-                    saepe dolorum blanditiis
-                    laudantium aut expedita consectetur modi facilis iusto sequi assumenda rem ipsum dolor sit amet </p>
-
-                <div class="row brands p-4">
-                    <div class="col-md-1">
-                        <div class="card">
-                            <img src="assets/g3.jpeg" alt="...">
-                        </div>
-                    </div>
-                    <div class="col-md-1">
-                        <div class="card">
-                            <img src="assets/g9.jpeg" alt="...">
-                        </div>
-                    </div>
-                    <div class="col-md-1">
-                        <div class="card">
-                            <img src="assets/g8.jpeg" alt="...">
-                        </div>
-                    </div>
-                    <div class="col-md-1">
-                        <div class="card">
-                            <img src="assets/g9.jpeg" alt="...">
-                        </div>
-                    </div>
-                    <div class="col-md-1">
-                        <div class="card">
-                            <img src="assets/g3.jpeg" alt="...">
-                        </div>
-                    </div>
-                </div>
-
-            </div>
-
-        </section> -->
-        <section class="improved-gallery why-buy-from-us left-right-margin">
-            <div class="why-buy-text">
-                <h1>Improved Gallery Module</h1>
-                <hr />
-                <p>
-                    The gallery module supports images Lorem ipsum dolor sit amet
-                    consectetur adipisicing elit. Iure fugit nostrum nisi reprehenderit,
-                    repudiandae quas praesentium in expedita tenetur voluptatem voluptas
-                    magni! Sequi aliquid nobis, amet voluptates ratione totam accusantium?
-                </p>
-            </div>
-            <div class="gallary-image-container">
-                <img src="assets/g3.jpeg" alt="">
-                <img src="assets/g8.jpeg" alt="">
-                <img src="assets/g9.jpeg" alt="">
-                <img src="assets/g3.jpeg" alt="">
-                <img src="assets/g8.jpeg" alt="">
-                <img src="assets/g9.jpeg" alt="">
-                <img src="assets/g3.jpeg" alt="">
-                <img src="assets/g8.jpeg" alt="">
-                <img src="assets/g9.jpeg" alt="">
-            </div>
-        </section>
-        <section>
-            <div class="container text-center p-4">
-                <h1>from our blog</h1>
-                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Similique expedita facilis incidunt tempora
-                    cupiditate, enim quod nisi sed. Magnam, facere.
-                </p>
-
-
-                <div class="row from-our-blog ">
-                    <div class="col-md-4 ">
-                        <div class="card h-100">
-                            <img src="assets/bags.jpg" height="400px">
-                            <div class="card-body">
-                                <div class=" admin-icon">
-                                    <i class="fa-solid fa-user"></i>
-                                    <p>admin</p>
-                                    <i class="fa-regular fa-comment-dots"></i>
-                                    <p>38</p>
-                                    <i class="fa-solid fa-eye"></i>
-                                    <p>19340</p>
+                                    </div>
                                 </div>
-                                <h5 class="card-title">Another Blog post</h5>
-                                <p class="card-text">This is a wider card with supporting text below as a natural
-                                    lead-in to
-                                    additional content. This content is a little bit longer.</p>
-                            </div>
+                                <div class="slide slide2">
+                                    img
+                                    <div class="caption">
 
-                        </div>
-                    </div>
-                    <div class="col-md-4">
-                        <div class="card h-100">
-                            <img src="assets/bags.jpg" height="400px">
-                            <div class="card-body">
-                                <div class=" admin-icon">
-                                    <i class="fa-solid fa-user"></i>
-                                    <p>admin</p>
-                                    <i class="fa-regular fa-comment-dots"></i>
-                                    <p>38</p>
-                                    <i class="fa-solid fa-eye"></i>
-                                    <p>19340</p>
+                                        <button type="button" class="btn btn-primary"
+                                            style="--bs-btn-padding-y: .35rem; --bs-btn-padding-x: .5rem; --bs-btn-font-size: .95rem;">
+                                            watch
+                                        </button>
+
+                                        <h1>Best Watch options at any resolution</h1>
+                                        <div class="learn-more">
+                                            <p>learn more</p>
+                                        </div>
+                                    </div>
                                 </div>
-                                <h5 class="card-title">Best Leather Bags</h5>
-                                <p class="card-text">This card has supporting text below as a natural lead-in to
-                                    additional
-                                    content.</p>
-                            </div>
+                                <div class="slide slide3">
+                                    <div class="caption">
 
-                        </div>
-                    </div>
-                    <div class="col-md-4">
-                        <div class="card h-100">
-                            <img src="assets/bags.jpg" height="400px">
-                            <div class="card-body">
-                                <div class=" admin-icon">
-                                    <i class="fa-solid fa-user"></i>
-                                    <p>admin</p>
-                                    <i class="fa-regular fa-comment-dots"></i>
-                                    <p>38</p>
-                                    <i class="fa-solid fa-eye"></i>
-                                    <p>19340</p>
+                                        <button type="button" class="btn btn-primary"
+                                            style="--bs-btn-padding-y: .35rem; --bs-btn-padding-x: .5rem; --bs-btn-font-size: .95rem;">
+                                            watch
+                                        </button>
+
+                                        <h1>Best Watch options at any resolution</h1>
+                                        <div class="learn-more">
+                                            <p>learn more</p>
+                                        </div>
+                                    </div>
                                 </div>
-                                <h5 class="card-title">Journal Blog is Here</h5>
-                                <p class="card-text">This is a wider card with supporting text below as a natural
-                                    lead-in to
-                                    additional content. This card has even longer content than the first to show that
-                                    equal
-                                    height action.</p>
+
+                                <div class="slide slide1">
+                                    <div class="caption">
+
+                                        <button type="button" class="btn btn-primary"
+                                            style="--bs-btn-padding-y: .35rem; --bs-btn-padding-x: .5rem; --bs-btn-font-size: .95rem;">
+                                            watch
+                                        </button>
+
+                                        <h1>Best Watch options at any resolution</h1>
+                                        <div class="learn-more ">
+                                            <p>learn more</p>
+                                        </div>
+                                    </div>
+                                </div>
+
                             </div>
 
+                        </div>
+
+                    </div>
+                    <div class="col-md-4">
+                        <div class="car-container">
+                            <div class="slidee slide1">
+                                <div class="caption row d-flex">
+                                    <div class="col-md-6 ">
+                                        <h1 id="wear"> wearables</h1>
+                                        <p id="intelligent">Intelligent & Durable Design</p>
+                                    </div>
+
+                                    <div class="col-md-6">
+                                        <img src="assets/computer.png" alt="">
+                                    </div>
+
+
+                                </div>
+                            </div>
+                            <div class="slidee slide2">
+                                <div class="caption row">
+                                    <div class="col-md-5">
+                                        <h1 id="wear">computer</h1>
+                                        <p id="intelligent">Intelligent & Durable Design</p>
+                                    </div>
+                                    <div class="col-md-7">
+                                        <img src="assets/watch.png" alt="">
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
-        </section>
-        <section>
-            <div class="container-fluid what-people text-center p-4">
-                <h1>what people are saying about us?</h1>
-                <div class="row text-center">
-                    <div class="col-md-4">
-                        <div class="content">
-                            <div class="quote-icon p-4">
-                                <i class="fa-solid fa-quote-left "></i>
+
+
+            <section>
+                <!-- 1.Free shiping  -->
+                <div class="container-fluid text-center shipping">
+                    <div class="free-shiping-container row">
+                        <div class="col-md-3">
+                            <div class="icon-container">
+                                <div class="icon">
+                                    <i class="fa-solid fa-truck-fast"></i>
+                                </div>
+
+                                <div class="text">
+                                    <h2>Free Shipping</h2>
+                                    <p>Free delivery over $100</p>
+                                </div>
                             </div>
-                            <p>
-                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem dicta vero vitae mollitia
-                                quasi a
-                                numquam inventore consectetur amet nobis.</p>
+                        </div>
+
+
+                        <!-- 2.Free returns  -->
+
+
+                        <div class="col-md-3">
+                            <div class="icon-container">
+                                <div class="icon">
+                                    <i class="fa-solid fa-arrow-rotate-left"></i>
+                                </div>
+                                <div class="text">
+                                    <h2>Free Shipping</h2>
+                                    <p>Free delivery over $100</p>
+                                </div>
+                            </div>
+
+                        </div>
+
+                        <!-- 3.Secure shoping -->
+
+
+                        <div class="col-md-3">
+                            <div class="icon-container">
+                                <div class="icon">
+                                    <i class="fa-solid fa-shield-halved"></i>
+                                </div>
+
+                                <div class="text">
+                                    <h2>Free Shipping</h2>
+                                    <p>Free delivery over $100</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- 4.Unlimited Blocks -->
+
+
+                        <div class="col-md-3">
+                            <div class="icon-container">
+                                <div class="icon">
+                                    <i class="fa-solid fa-cube"></i>
+                                </div>
+
+                                <div class="text">
+                                    <h2>Free Shipping</h2>
+                                    <p>Free delivery over $100</p>
+                                </div>
+                            </div>
                         </div>
                     </div>
-                    <div class="col-md-4">
-                        <div class="content">
-                            <div class="quote-icon p-4">
-                                <i class="fa-solid fa-quote-left "></i>
-                            </div>
-                            <p>
-                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem dicta vero vitae mollitia
-                                quasi a
-                                numquam inventore consectetur amet nobis.</p>
-                        </div>
+                </div>
+            </section>
+
+
+            <section>
+                <div class="container-fluid text-center why-buy ">
+                    <h1>why buy from us ?</h1>
+                    <p class="para">Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima doloremque nesciunt
+                        iure
+                        quasi maiores
+                        perferendis
+                        iste labore inventore numquam itaque!</p>
+                    <p class="para">Lorem ipsum, dolor sit amet consectetur adipisicing <a href="#">learn more</a></p>
+
+                    <div class="categories-navigation-container">
+                        <a>
+                            <p class="active-why-buy">
+                                top categories
+                            </p>
+                        </a>
+
+                        <a>
+                            <p>electronics</p>
+                        </a>
+                        <a>
+                            <p>beauty</p>
+                        </a>
+                        <a>
+                            <p>fashion</p>
+                        </a>
                     </div>
-                    <div class="col-md-4">
-                        <div class="content">
-                            <div class="quote-icon p-4">
-                                <i class="fa-solid fa-quote-left "></i>
-                            </div>
-                            <p>
-                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem dicta vero vitae mollitia
-                                quasi a
-                                numquam inventore consectetur amet nobis.</p>
+
+                    <div class="container-fluid text-center comm-padding">
+                        <div id="product-list-3" class="d-flex">
+
                         </div>
+
+
+                    </div>
+                </div>
+            </section>
+
+            <section>
+
+
+
+                <div class="container text-center">
+                    <h1>Feature Product</h1>
+                    <p class="para">Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima doloremque nesciunt
+                        iure
+                        quasi maiores
+                        perferendis
+                        iste labore inventore numquam itaque!</p>
+                    <p class="para">Lorem ipsum, dolor sit amet consectetur adipisicing <a href="#">learn more</a></p>
+
+                </div>
+                <div class="categories-navigation-container">
+                    <a>
+                        <p class="active-why-buy">
+                            top categories
+                        </p>
+                    </a>
+
+                    <a>
+                        <p>electronics</p>
+                    </a>
+                    <a>
+                        <p>beauty</p>
+                    </a>
+                    <a>
+                        <p>fashion</p>
+                    </a>
+                </div>
+
+                <div class="container-fluid comm-padding" id="product">
+                    <div class="text-center">
+                        <h2 class="display-7">PRODUCTS</h2>
+                    </div>
+                    <div class="row d-flex">
+                        <ul id="home_products" class="d-flex">
+
+                        </ul>
                     </div>
 
                 </div>
+                <script src="main.js"></script>
 
 
+                <section>
+
+                    <div class="container-fluid text-center comm-padding ">
+                        <h1>featured category</h1>
+                        <p class="para">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Magni laboriosam
+                            accusantium
+                            provident quod
+                            voluptas? Natus earum quasi labore quidem vel?</p>
+                        <p class="para">Lorem ipsum dolor, sit amet consectetur adipisicing elit.</p>
+                        <div id="home_products_2" class="d-flex">
+
+                        </div>
+                    </div>
+
+                </section>
+                
+                <section>
+                    <div class="container-fluid  text-center ">
+                        <h1> shop by brands </h1>
+                        <div class="row cus-row">
+                            <div class="col-md-2  cus-card">
+
+                                <img src="assets/sony_logo_PNG3.png" alt="...">
+
+                            </div>
+                            <div class="col-md-2 cus-card">
+
+                                <img src="assets/carrera.png" alt="...">
+
+                            </div>
+                            <div class="col-md-2 cus-card">
+
+                                <img src="assets/nike.png" alt="...">
+
+                            </div>
+                            <div class="col-md-2 cus-card">
+
+                                <img src="assets/ny.png" alt="...">
+
+                            </div>
+                            <div class="col-md-2 cus-card">
+
+                                <img src="assets/sony_logo_PNG3.png" alt="...">
+
+                            </div>
+                            <div class="col-md-2 cus-card">
+
+                                <img src="assets/sony_logo_PNG3.png" alt="...">
+                            </div>
+                        </div>
+
+                    </div>
+
+                </section>
+            </section>
+
+
+       
+
+                <section class="improved-gallery why-buy-from-us left-right-margin">
+                    <div class="why-buy-text">
+                        <h1>Improved Gallery Module</h1>
+                        <hr />
+                        <p>
+                            The gallery module supports images Lorem ipsum dolor sit amet
+                            consectetur adipisicing elit. Iure fugit nostrum nisi reprehenderit,
+                            repudiandae quas praesentium in expedita tenetur voluptatem voluptas
+                            magni! Sequi aliquid nobis, amet voluptates ratione totam accusantium?
+                        </p>
+                    </div>
+                    <div class="gallary-image-container">
+                        <img src="assets/g3.jpeg" alt="">
+                        <img src="assets/g8.jpeg" alt="">
+                        <img src="assets/g9.jpeg" alt="">
+                        <img src="assets/g3.jpeg" alt="">
+                        <img src="assets/g8.jpeg" alt="">
+                        <img src="assets/g9.jpeg" alt="">
+                        <img src="assets/g3.jpeg" alt="">
+                        <img src="assets/g8.jpeg" alt="">
+                        <img src="assets/g9.jpeg" alt="">
+                    </div>
+                </section>
+                <section>
+                    <div class="container text-center p-4">
+                        <h1>from our blog</h1>
+                        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Similique expedita facilis incidunt
+                            tempora
+                            cupiditate, enim quod nisi sed. Magnam, facere.
+                        </p>
+
+
+                        <div class="row from-our-blog ">
+                            <div class="col-md-4 ">
+                                <div class="card h-100">
+                                    <img src="assets/bags.jpg" height="400px">
+                                    <div class="card-body">
+                                        <div class=" admin-icon">
+                                            <i class="fa-solid fa-user"></i>
+                                            <p>admin</p>
+                                            <i class="fa-regular fa-comment-dots"></i>
+                                            <p>38</p>
+                                            <i class="fa-solid fa-eye"></i>
+                                            <p>19340</p>
+                                        </div>
+                                        <h5 class="card-title">Another Blog post</h5>
+                                        <p class="card-text">This is a wider card with supporting text below as a
+                                            natural
+                                            lead-in to
+                                            additional content. This content is a little bit longer.</p>
+                                    </div>
+
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="card h-100">
+                                    <img src="assets/bags.jpg" height="400px">
+                                    <div class="card-body">
+                                        <div class=" admin-icon">
+                                            <i class="fa-solid fa-user"></i>
+                                            <p>admin</p>
+                                            <i class="fa-regular fa-comment-dots"></i>
+                                            <p>38</p>
+                                            <i class="fa-solid fa-eye"></i>
+                                            <p>19340</p>
+                                        </div>
+                                        <h5 class="card-title">Best Leather Bags</h5>
+                                        <p class="card-text">This card has supporting text below as a natural lead-in to
+                                            additional
+                                            content.</p>
+                                    </div>
+
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="card h-100">
+                                    <img src="assets/bags.jpg" height="400px">
+                                    <div class="card-body">
+                                        <div class=" admin-icon">
+                                            <i class="fa-solid fa-user"></i>
+                                            <p>admin</p>
+                                            <i class="fa-regular fa-comment-dots"></i>
+                                            <p>38</p>
+                                            <i class="fa-solid fa-eye"></i>
+                                            <p>19340</p>
+                                        </div>
+                                        <h5 class="card-title">Journal Blog is Here</h5>
+                                        <p class="card-text">This is a wider card with supporting text below as a
+                                            natural
+                                            lead-in to
+                                            additional content. This card has even longer content than the first to show
+                                            that
+                                            equal
+                                            height action.</p>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <section>
+                    <div class="container-fluid what-people text-center p-4">
+                        <h1>what people are saying about us?</h1>
+                        <div class="row text-center">
+                            <div class="col-md-4">
+                                <div class="content">
+                                    <div class="quote-icon p-4">
+                                        <i class="fa-solid fa-quote-left "></i>
+                                    </div>
+                                    <p>
+                                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem dicta vero vitae
+                                        mollitia
+                                        quasi a
+                                        numquam inventore consectetur amet nobis.</p>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="content">
+                                    <div class="quote-icon p-4">
+                                        <i class="fa-solid fa-quote-left "></i>
+                                    </div>
+                                    <p>
+                                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem dicta vero vitae
+                                        mollitia
+                                        quasi a
+                                        numquam inventore consectetur amet nobis.</p>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="content">
+                                    <div class="quote-icon p-4">
+                                        <i class="fa-solid fa-quote-left "></i>
+                                    </div>
+                                    <p>
+                                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem dicta vero vitae
+                                        mollitia
+                                        quasi a
+                                        numquam inventore consectetur amet nobis.</p>
+                                </div>
+                            </div>
+
+                        </div>
+
+
+                    </div>
+
+
+                </section>
+
+
+
+               
             </div>
 
+            
+            <!-- hide div close -->
 
-        </section>
-        <div class="most-viewed container-fluid">
-            <div class="row">
-                <div class="col-md-3 d-flex  justify-content-center">
 
-                    <div class="images">
-                        <img src="assets/fashion.jpeg" height="120px" width="100px" />
-                    </div>
-                    <div class="name">
-                        <p>Oversized Sunglasses For Lon...<br>$397.00</p>
-                        <p><i class="fa-solid fa-cart-shopping"></i> <i class="fa-regular fa-heart"></i> <i
-                                class="fa-solid fa-arrow-right-arrow-left"></i></p>
+
+                <div class="most-viewed container-fluid">
+                    <div class="row">
+                        <div class="col-md-3 d-flex  justify-content-center">
+
+                            <div class="images">
+                                <img src="assets/fashion.jpeg" height="120px" width="100px" />
+                            </div>
+                            <div class="name">
+                                <p>Oversized Sunglasses For Lon...<br>$397.00</p>
+                                <p><i class="fa-solid fa-cart-shopping"></i> <i class="fa-regular fa-heart"></i> <i
+                                        class="fa-solid fa-arrow-right-arrow-left"></i></p>
+                            </div>
+                        </div>
+
+                        <div class=" col-md-3 d-flex justify-content-center">
+
+                            <div class="images">
+                                <img src="assets/footwear.jpeg" height="120px" width="100px" />
+                            </div>
+                            <div class="name">
+                                <p>Oversized Sunglasses For Lon...<br>$397.00</p>
+                                <p><i class="fa-solid fa-cart-shopping"></i> <i class="fa-regular fa-heart"></i> <i
+                                        class="fa-solid fa-arrow-right-arrow-left"></i></p>
+                            </div>
+                        </div>
+                        <div class=" col-md-3 d-flex justify-content-center">
+
+                            <div class="images">
+                                <img src="assets/bags.jpg" height="120px" width="100px" />
+                            </div>
+                            <div class="name">
+                                <p>Oversized Sunglasses For Lon...<br>$397.00</p>
+                                <p><i class="fa-solid fa-cart-shopping"></i> <i class="fa-regular fa-heart"></i> <i
+                                        class="fa-solid fa-arrow-right-arrow-left"></i></p>
+                            </div>
+                        </div>
+                        <div class="col-md-3 d-flex justify-content-center">
+
+                            <div class="images">
+                                <img src="assets/beauty.jpg" height="120px" width="100px" />
+                            </div>
+                            <div class="name">
+                                <p>Oversized Sunglasses For Lon...<br>$397.00</p>
+                                <p><i class="fa-solid fa-cart-shopping"></i> <i class="fa-regular fa-heart"></i> <i
+                                        class="fa-solid fa-arrow-right-arrow-left"></i></p>
+                            </div>
+                        </div>
                     </div>
                 </div>
-
-                <div class=" col-md-3 d-flex justify-content-center">
-
-                    <div class="images">
-                        <img src="assets/footwear.jpeg" height="120px" width="100px" />
-                    </div>
-                    <div class="name">
-                        <p>Oversized Sunglasses For Lon...<br>$397.00</p>
-                        <p><i class="fa-solid fa-cart-shopping"></i> <i class="fa-regular fa-heart"></i> <i
-                                class="fa-solid fa-arrow-right-arrow-left"></i></p>
-                    </div>
-                </div>
-                <div class=" col-md-3 d-flex justify-content-center">
-
-                    <div class="images">
-                        <img src="assets/bags.jpg" height="120px" width="100px" />
-                    </div>
-                    <div class="name">
-                        <p>Oversized Sunglasses For Lon...<br>$397.00</p>
-                        <p><i class="fa-solid fa-cart-shopping"></i> <i class="fa-regular fa-heart"></i> <i
-                                class="fa-solid fa-arrow-right-arrow-left"></i></p>
-                    </div>
-                </div>
-                <div class="col-md-3 d-flex justify-content-center">
-
-                    <div class="images">
-                        <img src="assets/beauty.jpg" height="120px" width="100px" />
-                    </div>
-                    <div class="name">
-                        <p>Oversized Sunglasses For Lon...<br>$397.00</p>
-                        <p><i class="fa-solid fa-cart-shopping"></i> <i class="fa-regular fa-heart"></i> <i
-                                class="fa-solid fa-arrow-right-arrow-left"></i></p>
-                    </div>
-                </div>
-            </div>
         </div>
-
         <section>
             <div class="social-media-icons container ">
                 <p>
@@ -1014,7 +1165,7 @@
                         </div>
 
                     </div>
-                    <div class="modal-footer d-flex justify-content-center">
+                     <div class="modal-footer d-flex justify-content-center">
                         <button class="btn btn-deep-orange" onclick="regsubmit(event)" id="reg-btn">REGISTER</button>
                     </div>
                 </div>
@@ -1051,15 +1202,11 @@
                     <div class="w3-container">
                         <div class="modal-body mx-3">
                             <div class="md-form mb-5">
-                                <i class="fas fa-user prefix grey-text"></i>
-                                <input type="text" id="orangeForm-name1" class="form-control validate">
-                                <label data-error="wrong" data-success="right" for="orangeForm-name">Your name</label>
-                            </div>
-                            <div class="md-form mb-5">
                                 <i class="fas fa-envelope prefix grey-text"></i>
                                 <input type="email" id="orangeForm-email1" class="form-control validate">
                                 <label data-error="wrong" data-success="right" for="orangeForm-email">Your email</label>
                             </div>
+                            
 
                             <div class="md-form mb-4">
                                 <i class="fas fa-lock prefix grey-text"></i>
@@ -1069,7 +1216,7 @@
                             </div>
 
                         </div>
-                        <div class="modal-footer d-flex justify-content-center">
+                        <div class="modal-footer d-flex justify-content-center mb-2 ">
                             <button class="btn btn-deep-orange" onclick="logsubmit(event)" id="reg-btn">login</button>
                         </div>
                     </div>
@@ -1103,7 +1250,8 @@
 
             </div>
         </div>
-</body>
-<script src="main.js"></script>
+        <script src="main.js"></script>
+    </body>
+    
 
 </html>

@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>search-page</title>
+
+
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"
+    integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+
+
+<!-- font awsome link -->
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+    integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+<!-- bootstrap js link -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+    crossorigin="anonymous"></script>
+<!-- add to cart modal -->
+
+
+<!-- *****************Bootstrap CDN********************************* -->
+<!-- Latest compiled and minified CSS -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+<!-- Latest compiled JavaScript -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+
+<!-- *****************Bootstrap CDN********************************* -->
+<!-- Latest compiled and minified CSS -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+<!-- Latest compiled JavaScript -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+
+
+<!-- css link -->
+<link rel="stylesheet" href="assets/style.css">
+<!-- <link rel="stylesheet" href="style.css"> -->
+
+<!-- login-modal -->
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+
+</head>
+<body>
+
+     <!-- searchbar in new page -->
+
+     <div class="container-fluid ">
+        <div class="row d-flex">
+            <div class="col-md-3 " id="filter-sectionno">
+                <h1>Search-camera</h1>
+                <hr>
+                <div class="filter">
+                    <h3>Filter</h3>
+                    <button><i class="fa-sharp fa-solid fa-circle-xmark"></i> Clear</button>
+                </div>
+                <br>
+
+                <div class="title_panel">
+                    <h6>PRICE</h6>
+                    <a href="#" onclick="minusfunc()">
+                        <h2>-</h2>
+                    </a>
+                </div>
+                <div id="price_content">
+                    <input id="range_tggl" type="range" min="10" max="10000">
+                    <div class="price_input">
+                        <a>$<input type="text" value="10"></a>
+                        <a>$<input id="max" type="text"></a>
+                    </div>
+                </div>
+
+
+
+                <hr>
+                <div class="title_panel">
+                    <h6>AVAILABILITY</h6>
+                    <a href="#" onclick="minusfunc()">
+                        <h2>-</h2>
+                    </a>
+                </div>
+
+                <div id="price_content">
+                    <a><input type="checkbox">Out Of Stock</a>
+                </div>
+                <hr>
+
+                <div class="title_panel">
+                    <h6>SUBCATEGORIES</h6>
+                    <h2>-</h2>
+                </div>
+                <div id="price_content">
+                    <a><img src="assets/g3.jpeg" width="100px" height="100px" > Electronics</a>
+                </div>
+                <hr>
+                <div class="title_panel">
+                    <h6>BRANDS</h6>
+                    <h2>-</h2>
+                </div>
+                <div id="price_content">
+                    <a><img src="assets/g8.jpeg " width="100px" height="100px"></a>
+                </div>
+                <hr>
+                <div class="title_panel">
+                    <h6>NO. OF CORES</h6>
+                    <h2>-</h2>
+                </div>
+                <div id="price_content">
+                    <a><input type="checkbox">4</a>
+                </div>
+
+
+
+
+            </div>
+
+
+            <div class=" col-md-9 mt-4 hide-sec1no">
+                <div class="right col-md-10 " style="width: 65%;">
+                    <div class="input-field d-flex">
+                        <div class="inputs">
+                            <input type="text" name="search" value="camera" placeholder="Keywords" id="input-search"
+                                class="form-control">
+                        </div>
+                        <div class="dropdown ml-4">
+                            <select class="select">
+                                <option>All</option>
+                                <option>Option 1</option>
+                                <option>Option 2</option>
+                                <option>Option 3</option>
+                                <option>Option 4</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="checkbox">
+                        <label class="checkbox-inline">
+                            <input type="checkbox" name="sub_category" value="1" disabled="">
+                            Search in subcategories</label>
+                    </div>
+                    <div class="checkbox2">
+
+                        <label class="checkbox-inline">
+                            <input type="checkbox" name="sub_category" value="1" disabled="">
+                            Search in Product description</label>
+                    </div>
+                    <div class="search-btn">
+                        <button>Search</button>
+                    </div>
+                    <h3>Products meeting the search criteria</h3>
+                    <hr>
+                    <div class="d-flex" style="justify-content: space-between;">
+                        <div class="d-flex">
+                            <i class="fas fa-th" style="font-size: 25px;"></i>&nbsp; &nbsp; <i class="fas fa-list fa"
+                                style="font-size: 25px;"></i> &nbsp; &nbsp;
+                            <i class="fa-solid fa-arrow-right-arrow-left compare" style="font-size: 20px;"></i>
+                            &nbsp;&nbsp;<p style="color: blue; font-size: 25px;"> Product compare</p>
+                        </div>
+                        <div class="d-flex mt-2">
+                            <div class="dropdown">
+                                <label
+                                    style="background-color: lightgray; border: 1px solid lightgray; border-radius: 3px; padding: 1px;">Sort
+                                    By: </label>
+                                <select style="width: 8vw;">
+                                    <option>Default</option>
+                                    <option>Option 1</option>
+                                    <option>Option 2</option>
+                                    <option>Option 3</option>
+                                    <option>Option 4</option>
+                                </select>
+                            </div>
+                            &nbsp;
+                            <div class="dropdown">
+                                <label
+                                    style="background-color: lightgray; border: 1px solid lightgray; border-radius: 3px; padding: 1px;">Show:
+                                </label>
+
+                                <select>
+                                    <option>12</option>
+                                    <option>Option 1</option>
+                                    <option>Option 2</option>
+                                    <option>Option 3</option>
+                                    <option>Option 4</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="col-md-9  search-section  d-flex" id="search-item-wrap">
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <script>
+
+        let pro_id = parseInt(sessionStorage.getItem('p_id'));
+        const showsearch = document.querySelector('.search-section')
+        fetch('first.json')
+            .then((response) => response.json())
+            .then((data) => {
+    
+                const product = data.products.find(product => product.id === pro_id);
+                showsearch.innerHTML = `
+       
+       
+         <div class="search-section">
+         <div class="card position-relative m-3 " style="width:280px;">
+        <div class="badge-overlay">
+            <!-- Change Badge Position, Color, Text here-->
+            <span class="top-left badge ">${product.badge}</span>
+        </div>
+        <span
+            class="position-absolute top-10 start-100 translate-middle badge1  badge-danger">
+            ${product.sale}
+        </span>
+        <img src=${product.img} class="card-img-top" width="100%" height="300px">
+        <div class="card-body pt-0 px-0">
+            <div class="d-flex flex-row justify-content-between p-3 mid">
+                <a class="d-flex flex-column text-muted mb-1">
+                    ${product.brand}
+                </a>
+                <p class="d-flex flex-column text-muted mb-2">${product.model}
+                </p>
+            </div>
+            <strong class="pl-3">${product.name}</strong>
+            <p>${product.price} &nbsp; <s>${product.cutprice}</s></p>
+            <div class=" add mx-3 mt-3 d-block">
+                <input type="number" class="quantity__input" value="1">
+                
+                <button type="button" onclick="addToCart(event,${product.id},'cart')" class="btn btn-danger btn-block mb-1"><small>ADD TO
+                        CART</small></button>&nbsp; &nbsp; &nbsp;
+                <i class="fa-regular fa-heart mb-2 " onclick=" addToCart(event,${product.id},'wishlist')"></i> &nbsp; &nbsp;
+                <i class="fa-solid fa-arrow-right-arrow-left"></i>
+            </div>
+            <div class="d-flex flex-row justify-content-between p-3 mid">
+                <p class="d-flex flex-column mb-1">
+                    <i class="fa-solid fa-dollar" style="color: lightgreen;"></i>Buy Now
+                </p>
+                <p class="d-flex flex-column mb-2"><i class="fa-solid fa-question"
+                        style="color: red;"></i>Question
+                </p>
+            </div>
+        </div>
+    </div>
+          
+         `
+            });
+    
+    
+        // multi-p_id
+        let multi_p_id = JSON.parse(sessionStorage.getItem("multi-p_id"));
+        
+    
+        for (let i = 0; i < multi_p_id.length; i++) {
+    
+            showsearch.innerHTML += `
+       
+       
+       <div class="search-section">
+       <div class="card position-relative m-3 " style="width:280px;">
+      <div class="badge-overlay">
+          <!-- Change Badge Position, Color, Text here-->
+          <span class="top-left badge">${multi_p_id[i].badge}</span>
+      </div>
+      <span
+          class="position-absolute top-10 start-100 translate-middle badge1  badge-danger">
+          ${multi_p_id[i].sale}
+      </span>
+      <img src=${multi_p_id[i].img} class="card-img-top" width="100%" height="300px">
+      <div class="card-body pt-0 px-0">
+          <div class="d-flex flex-row justify-content-between p-3 mid">
+              <a class="d-flex flex-column text-muted mb-1">
+                  ${multi_p_id[i].brand}
+              </a>
+              <p class="d-flex flex-column text-muted mb-2">${multi_p_id[i].model}
+              </p>
+          </div>
+          <strong class="pl-3">${multi_p_id[i].name}</strong>
+          <p>${multi_p_id[i].price} &nbsp; <s>${multi_p_id[i].cutprice}</s></p>
+          <div class=" add mx-3 mt-3 d-block">
+              <input type="number" class="quantity__input" value="1">
+              
+              <button type="button" onclick="addToCart(event,${multi_p_id[i].id},'cart')" class="btn btn-danger btn-block mb-1"><small>ADD TO
+                      CART</small></button>&nbsp; &nbsp; &nbsp;
+              <i class="fa-regular fa-heart mb-2 " onclick=" addToCart(event,${multi_p_id[i].id},'wishlist')"></i> &nbsp; &nbsp;
+              <i class="fa-solid fa-arrow-right-arrow-left"></i>
+          </div>
+          <div class="d-flex flex-row justify-content-between p-3 mid">
+              <p class="d-flex flex-column mb-1">
+                  <i class="fa-solid fa-dollar" style="color: lightgreen;"></i>Buy Now
+              </p>
+              <p class="d-flex flex-column mb-2"><i class="fa-solid fa-question"
+                      style="color: red;"></i>Question
+              </p>
+          </div>
+      </div>
+    </div>
+        
+       `
+    
+        }
+    
+       
+    </script>
+    <script src="filter.js"></script>
+   <script src="main.js"></script>
+ 
+   
+   
+</body>
+
+</html>
+  

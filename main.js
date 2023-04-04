@@ -1,39 +1,63 @@
 
 // ==============================searchbar=========================================
 
-const searchbox = document.getElementById('search-box');
-const searchResults = document.getElementById('search-results');
+let searchbox = document.getElementById('search-box');
+ let searchResults = document.getElementById('search-results');
 
-searchbox.addEventListener('input', function (event) {
+searchbox.addEventListener('keydown', function(event) {
     const searchTerm = event.target.value.toLowerCase();
-    searchResults.innerHTML = '';
+    
+    if (event.keyCode === 13) {
+      event.preventDefault();
+      fetch('first.json')
+      .then(response => response.json()) // parse the JSON response
+      .then(data => {
+        const matchescat = data.products.filter(item => item.cat.toLowerCase().startsWith(searchTerm.toLowerCase())); // filter the products based on the search term
+        console.log("hi",matchescat);
+       sessionStorage.setItem("multi-p_id",JSON.stringify(matchescat));
+       window.location.href = "search.html";
+      });
+      
+      
 
-    if (searchTerm.length >= 1) {
+          // store the search results in session storage
+    } else {
+      searchResults.innerHTML = '';
+  
+      if (searchTerm.length >= 1) {
         fetch('first.json')
-            .then(response => response.json())
-            .then(data => {
-                console.log("hello")
-                const matches = data.products.filter(item => item.name.toLowerCase().includes(searchTerm));
-                matches.forEach(item => {
-                    const li = document.createElement('li');
-                    li.innerHTML = `<a href= "#${item.id}" />${item.name}</a>`;
-                    searchResults.appendChild(li);
-                });
+          .then(response => response.json())
+          .then(data => {
+          
+            const matches = data.products.filter(item => item.name.toLowerCase().startsWith(searchTerm.toLowerCase()));
+            matches.forEach(item => {
+              const li = document.createElement('li');
+              li.innerHTML = `  
+                <div onclick="search(event,${item.id});sessionStorage.setItem('p_id' ,${item.id});">${item.name}</div>`;
+              searchResults.appendChild(li);
             });
+          });
+      }
     }
-});
+ });
+  
+  window.onload = function() {
+    const searchResults = JSON.parse(sessionStorage.getItem('searchResults'));
 
+ }
+  
+
+function search(event,productId) {
+    window.location.href = "search.html";
+  
+
+}
 
 // ================add to cart=======================
 fetch('first.json')
     .then((response) => response.json())
     .then((data) => {
         const ul = document.getElementById("home_products");
-
-
-
-        
-
         for (let i = 0; i < data.products.length; i++) {
             const product = data.products[i];
             var li = document.createElement("li");
@@ -79,38 +103,36 @@ fetch('first.json')
         }
     });
 
-   
 
 
 
 
-    let cartItems = [];
-    async  function addToCart(event, productId,action)
-    {
 
-        event.preventDefault();
-        const response = await fetch("first.json")
-        const data = await response.json();
-        const product = data.products.find(product => product.id === productId);
-        
-    
+let cartItems = [];
+async function addToCart(event, productId, action) {
+
+    event.preventDefault();
+    const response = await fetch("first.json")
+    const data = await response.json();
+    const product = data.products.find(product => product.id === productId);
 
 
-      if(action === 'cart')
-      {
+
+
+    if (action === 'cart') {
         console.log("cart")
         const existingItem = cartItems.find(item => item.id === productId);
-          if (existingItem) {
-        existingItem.quantity++;
+        if (existingItem) {
+            existingItem.quantity++;
 
-    } else {
+        } else {
 
-        cartItems.push({ id: productId, quantity: 1, product });
-    }
+            cartItems.push({ id: productId, quantity: 1, product });
+        }
 
-    let cart = document.getElementById("cart-element");
+        let cart = document.getElementById("cart-element");
 
-    cart.innerHTML = cartItems.map(item => `
+        cart.innerHTML = cartItems.map(item => `
       <br>
       <div class="cart-box">
                     <div>
@@ -131,12 +153,12 @@ fetch('first.json')
    
      
       `);
-      }
-      else{
+    }
+    else {
         console.log("wish");
-     let cart = document.getElementById("wish-element");
+        let cart = document.getElementById("wish-element");
 
-    cart.innerHTML += `
+        cart.innerHTML += `
       <br>
       <div class="cart-box">
                     <div>
@@ -154,8 +176,8 @@ fetch('first.json')
  
      
       `;
-      }
     }
+}
 
 fetch("first.json")
     .then((response) => response.json())
@@ -233,54 +255,54 @@ fetch("first.json")
 //++++++++++++++++++++++login-logout++++++++++++++++++
 
 let userarray = [];
-
-
 function regsubmit(event) {
     event.preventDefault();
+
     console.log("hiii")
     let name = document.getElementById("orangeForm-name").value;
     let email = document.getElementById("orangeForm-email").value;
     let pass = document.getElementById("orangeForm-pass").value;
-    console.log(name.value)
+    console.log(name);
 
     let user_obj = {
-
         name: name,
         email: email,
         pass: pass
+    }
+    let obj = localStorage.getItem('user');
+    let objstr = JSON.parse(obj);
+
+    if (objstr) {
 
     }
-
-    let objstr = JSON.parse(localStorage.getItem('user'));
-    if (objstr) { }
     for (let i = 0; i < objstr.length; i++) {
         if (email === objstr[i].email) {
             alert("already found")
             return;
         }
-
     }
+
+    console.log(user_obj)
+
 
     userarray.push(user_obj);
 
     localStorage.setItem("user", JSON.stringify(userarray));
 
-
-
 }
 
 function logsubmit(event) {
     event.preventDefault();
-    let name = document.getElementById("orangeForm-name1").value;
     let email = document.getElementById("orangeForm-email1").value;
+
     let pass = document.getElementById("orangeForm-pass1").value;
 
     let objstr = JSON.parse(localStorage.getItem('user'));
-     let activeuser= false;
+    let activeuser = false;
     for (let i = 0; i < objstr.length; i++) {
-        if (name == objstr[i].name && email == objstr[i].email && pass == objstr[i].pass) {
+        if (email == objstr[i].email && pass == objstr[i].pass) {
             alert("success")
-           activeuser= true;
+            activeuser = true;
             break;
         }
         else {
@@ -288,7 +310,7 @@ function logsubmit(event) {
             break;
         }
     }
-    if(activeuser==true){
+    if (activeuser == true) {
         `
         <div class="fa-solid fa-pencil" data-bs-toggle="modal"  data-bs-target="#login-modal">
             style="color: red;
@@ -296,5 +318,4 @@ function logsubmit(event) {
     }
 
 }
-
 

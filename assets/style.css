@@ -1,7 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;700;900&display=swap");
 @import url('https://fonts.googleapis.com/css2?family=Rubik&display=swap');
 
-
 * {
 
     padding: 0%;
@@ -11,14 +10,105 @@ body{
     width: 100vw !important;
     padding: 0%;
     margin: 0% ;
-    overflow-x: hidden;
+ 
 }
+
+.search-section{
+    flex-wrap: wrap;
+}
+
 #journal {
     text-transform: uppercase;
     font-weight: bolder;
     font-family: "Gloock", serif !important;
     font-size: 45px;
 }
+
+/* uhojlkp;ol; */
+
+
+.filter{
+    display: flex;
+    justify-content: space-between;
+
+}
+
+.filter button{
+    background-color: blue;
+    color: white;
+    font-size: 20px;
+    margin-left: 30px;
+    height: 30px;
+    border-radius: 5px;
+    border: none;
+}
+.title_panel{
+    display: flex;
+    justify-content: space-between;
+}
+.title_panel h2{
+    color: blue;
+
+}
+
+.title_panel a{
+    text-decoration: none;
+}
+
+.price_input input{
+    width: 130px;
+}
+
+.stock a{
+    display: block;
+}
+
+#filter-section{
+    display: none;
+}
+
+
+.hide-sec1{
+    display: none;
+}
+
+/* ihikjikjok */
+
+/* filter design */
+h6{
+    color: #2b569a;
+}
+.search-btn button{
+    background-color: #0050cf;
+    align-items: center;
+    color: white;
+    width: 75vw;
+    font-size: 20px;
+    border: none;
+}
+#input-search{
+   width: 42vw;
+   height: 3vw;
+   margin-bottom: 20px;
+
+}
+.select{
+    margin-bottom: 20px;
+    width: 22vw;
+    height: 3vw;
+}
+.compare{
+    border: 1px solid blue; 
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    padding: 10px;
+    text-align: center;
+     font-size: 8px; 
+     color: blue;   
+}
+
+
 
 .customnav ul li {
     margin-left: 5px;
@@ -466,21 +556,21 @@ body {
 }
 
 .car-container .slider .slide.slide1 {
-    background: url(../assets/phone.jpg);
+    background: url("/assets/phone.jpg");
     background-position: right;
     background-repeat: no-repeat;
     background-size: cover;
 }
 
 .car-container .slider .slide.slide2 {
-    background: url(../assets/images.jpeg);
+    background: url("/assets/images.jpeg");
     background-position: right;
     background-repeat: no-repeat;
     background-size: cover;
 }
 
 .car-container .slider .slide.slide3 {
-    background: url(../assets/caraousal.png);
+    background: url("/assets/caraousal.png");
     background-position: right;
     background-repeat: no-repeat;
     background-size: cover;

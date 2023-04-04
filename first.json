@@ -3,6 +3,7 @@
 
     {  "id":1,
          "img":"assets-product/camera.jpg",
+          "cat": "cam",
         "name"  : "Camera",
         "model" : "Model 123",
         "price" : "$999.00" ,
@@ -14,6 +15,7 @@
     {
         "id":2,
         "img":"assets-product/headphone.jpg",
+        "cat": "head",
         "name"  : "Headphones",
         "model" : "Model 123",
         "price" : "$100.00" ,
@@ -25,6 +27,7 @@
     { 
         "id":3,  
     "img":"assets-product/g5.jpeg",
+    "cat": "sho",
         "name"  : "Shoes",
         "model" : "Model 123",
         "price" : "$100.00" ,
@@ -36,6 +39,7 @@
     {
         "id":4,
         "img":"assets-product/headphone.jpg",
+        "cat": "head",
         "name"  : "Headphones",
         "model" : "Model 123",
         "price" : "$100.00" ,
@@ -47,6 +51,7 @@
     {
         "id":5,
       "img":"assets-product/camera.jpg",
+      "cat": "cam",
       "name"  : "Camera",
       "model" : "Model 123",
       "price" : "$100.00" ,
@@ -54,7 +59,19 @@
       "brand" : "Erickson" ,
       "sale" : "-40%",
       "badge" : "Sale 70% off"
-  }
+  },
+  { 
+        "id":6,  
+    "img":"assets-product/g5.jpeg",
+    "cat": "sho",
+        "name"  : "shoesstyle",
+        "model" : "Model 123",
+        "price" : "$100.00" ,
+        "cutprice" : "$10.00",
+        "brand" : "Erickson" ,
+        "sale" : "-70%",
+        "badge" : "Sale 50% off"
+    }
     
    ]
 }
