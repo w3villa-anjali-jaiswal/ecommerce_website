@@ -123,6 +123,7 @@ h6 {
 }
 
 #input-search {
+  justify-content: space-around;
     width: 31vw;
     height: 35px;
     margin-bottom: 20px;
