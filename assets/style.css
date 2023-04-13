@@ -2,7 +2,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Rubik&display=swap');
 
 * {
-
     padding: 0%;
     margin: 0%;
 }
@@ -11,6 +10,7 @@ html,
 body {
     max-width: 100vw;
     overflow-x: hidden;
+   
 }
 
 .search-section {
@@ -25,19 +25,12 @@ body {
 }
 
 
-#custom-descr a{
-    text-transform: uppercase;
-  margin-right: 15px;
-    text-decoration: none;
+.custom-descr{ 
+     margin-right: 15px;
     font-weight: bold;
-    font-size: large;
- 
-
+    
 }
-
 /* ufilter-section */
-
-
 .filter {
     display: flex;
     justify-content: space-between;
@@ -49,13 +42,15 @@ body {
 }
 
 .filter button {
-    background-color: blue;
+    background-color: #0d52d6;
     color: white;
     font-size: 20px;
-    margin-left: 30px;
+   padding: 1px 2px 1px 2px;
+    justify-items: center;
+    margin-left: 27px;
     height: 30px;
-    border-radius: 5px;
-    border: none;
+    border-radius: 3px;
+   border: none;
 }
 
 .comm-color {
@@ -105,16 +100,16 @@ h6 {
 }
 
 .search-btn button {
-    background-color: #0050cf;
+    background-color:#0d52d6;
     align-items: center;
     color: white;
-   width: 100%;
+   width: 102%;
     font-size: 20px;
     border: none;
 
 }
 .input-field{
-    justify-content: space-around;
+    justify-content: space-between;
 }
 #mainimg {
     height: 500px;
@@ -123,31 +118,20 @@ h6 {
 }
 
 #input-search {
-  justify-content: space-around;
-    width: 31vw;
+  justify-content: space-between;
+  margin-left: 1px;
+    width: 32vw;
     height: 35px;
     margin-bottom: 20px;
 
 }
 
 .select {
+    border: 1px solid aliceblue; 
     margin-bottom: 20px;
     width: 22vw;
     height: 35px;
 }
-
-.compare {
-    border: 1px solid blue;
-    width: 45px;
-    height: 45px;
-    border-radius: 50%;
-    padding: 10px;
-    text-align: center;
-    font-size: 8px;
-    color: blue;
-}
-
-
 
 .customnav ul li {
     margin-left: 5px;
@@ -188,9 +172,9 @@ h6 {
 }
 
 .department {
-    background-color: #2b3cf8;
+    background-color: #0d52d6;
     color: #0e0101;
-
+   padding-left: 105px;
 }
 
 .dep {
@@ -209,12 +193,14 @@ h6 {
 }
 
 .blog {
-    position: relative;
+    position: absolute;
     font-weight: bold;
     background-color: #fed049;
     padding: 20px 10px;
     text-transform: uppercase;
-    margin-left: 115px !important;
+    /* margin-left: 115px !important; */
+    justify-items: end;
+   left: 86.5%;
 
 }
 
@@ -231,6 +217,9 @@ h6 {
 
 }
 
+#search_here{
+    color: #000;
+}
 .searchTerm {
 
     border: 3px solid rgb(43, 158, 204);
@@ -248,12 +237,12 @@ h6 {
 
 .fa-cart-shopping {
     font-size: 20px;
-    color: #2bc8f8
+    color: white;
 }
 
 .searchButton {
     width: 40px;
-    background: rgb(72, 152, 184);
+    background-color: #0d52d6;
     text-align: center;
     color: #fff;
     border-radius: 0 5px 5px 0;
@@ -432,10 +421,12 @@ h6 {
 }
 
 #go-to-cart {
-    background-color: #2b3cf8 !important;
+    position: relative;
+    background-color: #0d52d6 !important;
     height: 50px;
     justify-content: center;
     margin-top: 10px;
+    border-radius: 3px;
 }
 
 #search-box {
@@ -571,13 +562,16 @@ body {
 {
      background-color:rgba(248,248,248,255);
 }
+#img-choose-js{
+    margin-top: 120px;
+}
 #img-choose-js img{
     border: 1px solid rgb(163, 158, 158);
     border-radius: 4px;
     margin: 1px;
 }
 #main-img{
-    background-color: rgb(243, 241, 241);
+
     text-align: center;
 }
 #mainimg{
@@ -786,7 +780,7 @@ body {
 
 
 
-@media (max-width: 1190px) {
+@media (max-width: 1490px) {
 
     .top-nav {
         display: none;
@@ -806,7 +800,13 @@ body {
         padding: 1px !important;
     }
 }
-
+@media (max-width: 988px) {
+    .fa-cart-shopping {
+       color: #000;
+       
+    }
+ 
+}
 /* common-padding */
 .comm-padding {
     padding: 0px 100px 0px 100px;
@@ -994,6 +994,9 @@ input[type=number]::-webkit-outer-spin-button {
 
 }
 
+
+
+
 @media screen and (max-width:620px) {
     .plr {
         padding-left: 2px;
@@ -1064,18 +1067,7 @@ input[type=number]::-webkit-outer-spin-button {
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-/* rohit css */
+/* description css */
 
 
 
@@ -1142,7 +1134,6 @@ img.img-fluid.images {
         margin-left: 10px;
     }
 }
-
 @media (min-width: 768px) {
     .images-wrapper {
         flex-direction: row;
@@ -1178,6 +1169,16 @@ img.img-fluid.images {
         margin-left: 10px;
     }
 }
+
+@media (max-width: 790px) {
+.search-section{
+    justify-content: center;
+}
+#filter-sectionno{
+    display: none;
+}
+}
+
 
 @media (min-width: 1100px) {
 
@@ -1301,10 +1302,10 @@ img.img-fluid.images {
 }
 
 .buy-now {
+
     background-color: green;
     color: #fff;
     border: none;
-    padding: 10px 20px;
     font-size: 16px;
     font-weight: bold;
     cursor: pointer;
