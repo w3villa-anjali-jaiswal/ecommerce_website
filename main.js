@@ -1,59 +1,59 @@
-
 // ==============================searchbar=========================================
 
 let searchbox = document.getElementById('search-box');
- let searchResults = document.getElementById('search-results');
+let searchResults = document.getElementById('search-results');
 
-searchbox.addEventListener('keydown', function(event) {
+searchbox.addEventListener('keydown', function (event) {
     const searchTerm = event.target.value.toLowerCase();
-    
-    if (event.keyCode === 13) {
-      event.preventDefault();
-      fetch('first.json')
-      .then(response => response.json()) // parse the JSON response
-      .then(data => {
-        const matchescat = data.products.filter(item => item.cat.toLowerCase().startsWith(searchTerm.toLowerCase())); // filter the products based on the search term
-        console.log("hi",matchescat);
-       sessionStorage.setItem("multi-p_id",JSON.stringify(matchescat));
-       window.location.href = "search.html";
-      });
-      
-      
 
-          // store the search results in session storage
-    } else {
-      searchResults.innerHTML = '';
-  
-      if (searchTerm.length >= 1) {
+    if (event.keyCode === 13) {
+        event.preventDefault();
         fetch('first.json')
-          .then(response => response.json())
-          .then(data => {
-          
-            const matches = data.products.filter(item => item.name.toLowerCase().startsWith(searchTerm.toLowerCase()));
-            matches.forEach(item => {
-              const li = document.createElement('li');
-              li.innerHTML = `  
-                <div onclick="search(event,${item.id});sessionStorage.setItem('p_id' ,${item.id});">${item.name}</div>`;
-              searchResults.appendChild(li);
+            .then(response => response.json()) // parse the JSON response
+            .then(data => {
+                const matchescat = data.products.filter(item => item.cat.toLowerCase().startsWith(searchTerm.toLowerCase())); // filter the products based on the search term
+                console.log("hi", matchescat);
+                sessionStorage.setItem("multi-p_id", JSON.stringify(matchescat));
+                window.location.href = "search.html";
             });
-          });
-      }
+
+
+
+        // store the search results in session storage
+    } else {
+        searchResults.innerHTML = '';
+
+        if (searchTerm.length >= 1) {
+            fetch('first.json')
+                .then(response => response.json())
+                .then(data => {
+
+                    const matches = data.products.filter(item => item.name.toLowerCase().startsWith(searchTerm.toLowerCase()));
+                    matches.forEach(item => {
+                        const li = document.createElement('li');
+                        li.innerHTML = `  
+                <div onclick="search(event,${item.id});sessionStorage.setItem('p_id' ,${item.id});">${item.name}</div>`;
+                        searchResults.appendChild(li);
+                    });
+                });
+        }
     }
- });
-  
-  window.onload = function() {
+});
+
+window.onload = function () {
+    sessionStorage.clear()
     const searchResults = JSON.parse(sessionStorage.getItem('searchResults'));
 
- }
-  
+}
 
-function search(event,productId) {
+
+function search(event, productId) {
     window.location.href = "search.html";
-  
 
 }
 
 // ================add to cart=======================
+
 fetch('first.json')
     .then((response) => response.json())
     .then((data) => {
@@ -70,7 +70,9 @@ fetch('first.json')
         class="position-absolute top-10 start-100 translate-middle badge1  badge-danger">
         ${product.sale}
     </span>
-    <img src=${product.img} class="card-img-top" width="100%" height="300px">
+
+    <a href="description.html?id=${product.id}"> <img src=${product.img}  onclick="showimg(event,${product.id})" class="card-img-top" width="100%" height="300px"></a>
+   
     <div class="card-body pt-0 px-0">
         <div class="d-flex flex-row justify-content-between p-3 mid">
             <a class="d-flex flex-column text-muted mb-1">
@@ -98,11 +100,11 @@ fetch('first.json')
             </p>
         </div>
     </div>
-</div>`;
-            ul.appendChild(li);
+</div>`; if (ul) {
+                ul.appendChild(li);
+            }
         }
     });
-
 
 
 
@@ -220,7 +222,9 @@ fetch("first.json")
         </div>
     </div>
 </div>`;
-            ul.appendChild(li);
+            if (ul) {
+                ul.appendChild(li);
+            }
         }
     });
 
@@ -238,18 +242,21 @@ fetch("first.json")
             const productElement = document.createElement("div");
 
             productElement.innerHTML = `
-          <div class=" card mb-4 m-3 text-center" style="width:280px ">
+          <div class=" card mb-4 mt-3 text-center" style="width:280px ">
        <img src=${product.img} class="card-img-top" width="100%" height="300px">
       
                
                <button type="button" class="btn btn-seceondary btn-block  bg-info"> PRODUCT</button>
                   
    </div>
-     `;
-            productList.appendChild(productElement);
+     `; if (productList) {
+
+                productList.appendChild(productElement);
+            }
         }
     })
     .catch(error => console.error(error));
+
 
 
 //++++++++++++++++++++++login-logout++++++++++++++++++
@@ -318,4 +325,47 @@ function logsubmit(event) {
     }
 
 }
+
+
+
+// =====================description content fetching ====================
+let myTabContent =document.getElementById('myTabContent');
+
+fetch('first.json')
+    .then(response => response.json())
+    .then(data => {
+
+
+        let myContent =document.getElementById('main-content');
+        let spec1 =document.getElementById('spec-type');
+        let spec2 =document.getElementById('spec-type1');
+        let spec3 =document.getElementById('spec-type2');
+        let contact = document.getElementById('contact');
+        let custum_tab =document.getElementById('custom1');
+  console.log(contact)
+
+        const descr= data.products[0];
+
+
+        for (let i = 0; i < data.products.length; i++) {
+        
+           myContent.innerHTML=`${descr.description}  hey anjali watsupp`;
+            spec1.innerHTML=`${ descr.specifications.type}`;
+            spec2.innerHTML=`${ descr.specifications.other1} `;
+            spec3.innerHTML=`${ descr.specifications.other2} `;
+           contact.innerHTML=`${descr.description}  hey anjali watsupp`
+        console.log(descr.custom_tabs)
+           custum_tab.innerText=`${descr.custom_tabs.content}  hey anjali watsupp`
+         
+        }
+
+    })
+
+
+
+
+
+
+
+
 
