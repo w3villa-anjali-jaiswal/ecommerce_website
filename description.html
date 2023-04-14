@@ -1,0 +1,514 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>description</title>
+
+
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+
+
+    <!-- font awsome link -->
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+        integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!-- bootstrap js link -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+    <!-- add to cart modal -->
+
+
+    <!-- *****************Bootstrap CDN********************************* -->
+    <!-- Latest compiled and minified CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Latest compiled JavaScript -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- *****************Bootstrap CDN********************************* -->
+    <!-- Latest compiled and minified CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Latest compiled JavaScript -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+
+
+    <!-- css link -->
+    <link rel="stylesheet" href="assets/style.css">
+    <!-- <link rel="stylesheet" href="style.css"> -->
+
+    <!-- login-modal -->
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+
+</head>
+
+<body>
+
+    <div id="show">
+        <script src="header.js"> </script>
+        <div class="container-fluid mt-4 p-0">
+            <div class="comm-padding">
+                <i class="fa fa-home"></i>
+                <i class="fa-solid fa-arrow-right"></i>
+                <a href="#">search</a>
+                <i class="fa-solid fa-arrow-right"></i>
+                <a href="#">Apple cinema 30"</a>
+
+            </div>
+            <div class=" comm-color comm-padding mt-4 pt-2 pb-2">
+                <h3>Apple cinema 30"</h3>
+            </div>
+
+        </div>
+
+        <div class="comm-padding container-fluid mt-4">
+            <div class="row   description-box">
+                <!-- =============================== -->
+
+
+                <div class="d-block img-choose  justify-content-between col-md-1" id="img-choose-js">
+                    <div class="mt-2"><img src="assets-product/laptop.jpg"
+                            onclick="showimg('assets-product/laptop.jpg')" width="80" height="80"></div>
+                    <div class="mt-2"><img src="assets/watch.png" onclick="showimg('assets/watch.png')" width="80"
+                            height="80"></div>
+                    <div class="mt-2"><img src="assets/phone.jpg" onclick="showimg('assets/phone.jpg')" width="80"
+                            height="80"></div>
+                    <div class="mt-2"><img src="assets-product/headphone.jpg"
+                            onclick="showimg('assets-product/headphone.jpg')" width="80" height="80"></div>
+                </div>
+                <!-- ============================ -->
+                <div class="col-md-5 " id="main-img">
+                    <img src="assets/fashion.jpeg " id="mainimg">
+                </div>
+                <!-- =============================== -->
+                <div class="col-md-6  ">
+                    <ul class="nav nav-tabs  custom-descr" id="myTab" role="tablist">
+                        <li class="nav-item" role="presentation">
+                            <button class="nav-link active" id="home-tab" data-bs-toggle="tab" data-bs-target="#home"
+                                type="button" role="tab" aria-controls="home" aria-selected="true">DESCRIPTION</button>
+                        </li>
+                        <li class="nav-item" role="presentation">
+                            <button class="nav-link" id="profile-tab" data-bs-toggle="tab" data-bs-target="#profile"
+                                type="button" role="tab" aria-controls="profile"
+                                aria-selected="false">SPECIFICATION</button>
+                        </li>
+                        <li class="nav-item" role="presentation">
+                            <button class="nav-link" id="contact-tab" data-bs-toggle="tab" data-bs-target="#contact"
+                                type="button" role="tab" aria-controls="contact" aria-selected="false">REVIEW</button>
+                        </li>
+                        <li class="nav-item" role="presentation">
+                            <button class="nav-link" id="custum-tab" data-bs-toggle="tab" data-bs-target="#custum"
+                                type="button" role="tab" aria-controls="contact"
+                                aria-selected="false">CUSTOM-TABS</button>
+                        </li>
+                    </ul>
+                    <div class="tab-content" id="myTabContent">
+                        <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
+                            <p class="mt-4" id="main-content">
+                                Product description, along with any other tab can be displayed as tabs, accordion or
+                                all-visible
+                                blocks in grid format or one under the other. You can mix and match tabs and blocks in
+                                any order
+                                and any position. Each tab can also be set up as a link and point to other pages or open
+                                popup
+                                modules. Optional "Show More" collapsible block content is also available as an option
+                                for large
+                                and tall descriptions or custom content.
+                            </p>
+                        </div>
+                        <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">
+                            <!-- specification -->
+                            <div class="mt-4">
+                                <div style="border: 1px solid black;">
+                                    <p class="col-md-6  mt-4" id="spec-type">style</p>
+                                </div>
+
+                                <div style="border: 1px solid black;" class="d-flex">
+                                    <p class="col-md-6 mt-4" id="spec-type1">style</p>
+                                    <p id="spec-type2" class="mt-4">party</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="tab-pane fade" id="contact" role="tabpanel" aria-labelledby="contact-tab">
+                            <!-- review -->
+                            <div class="mt-4">
+                                <p>There are no reviews for this product.</p>
+                                <h4>WRITE A REVIEW</h4>
+                                <p>Please <a>login</a> or <a>register</a> to review</p>
+
+                            </div>
+                        </div>
+                        <div class="tab-pane fade" id="custum" role="tabpanel" aria-labelledby="custum-tab">
+                            <!--  custom tabs -->
+
+                            <div class="mt-4">
+                                <p id="custom1">
+                                    Unlimited Blocks, Tabs or Accordions with any HTML content can be assigned to any
+                                    individual
+                                    product or to certain groups of products, like entire categories, brands, products
+                                    with
+                                    specific
+                                    options, attributes, price range, etc. You can indicate any criteria via the
+                                    advanced
+                                    product
+                                    assignment mechanism and only those products matching your criteria will display the
+                                    modules.
+
+                                </p>
+                                <p>
+                                    Also, any module can be selectively activated per device (desktop/tablet/phone),
+                                    customer
+                                    login status and other criteria. Imagine the possibilities.
+                                </p>
+
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div class="review-links mt-2 d-flex">
+                        <h4><a> Based on reviews </a></h4>
+                        <h4><b> - </b></h4>
+                        <h4><a>Write a review </a></h4>
+                    </div>
+                    <div class="product-price-group d-flex row mt-4 ">
+
+                        <div class="price-group col-md-4">
+                            <div class="product-price">
+                                $535.00
+                            </div>
+
+                            <div class="product-tax">
+                                Ex Tax: $535.00
+                            </div>
+                            <div class="product-reward">
+                                price in reward points: 400
+                            </div>
+                            <div class="product-10">
+                                10 or more 69.04$
+                            </div>
+                            <div class="product-20">
+                                20 or more 69.04$
+                            </div>
+                            <div class="product-30">
+                                30 or more 69.04$
+                            </div>
+                        </div>
+                        <div class=" col-md-4">
+                            <h6 class="check ml-4 pl-4"> <i class="fa fa-check"></i> in stock</h6>
+                            <Ul>
+                                <li>reward points: 100</li>
+                                <li>reward points: 100</li>
+                                <li>reward points: 100</li>
+                                <li>reward points: 100</li>
+                            </Ul>
+                        </div>
+                        <div class=" col-md-4  text-center">
+                            <img src="assets/g3.jpeg" height="100px" width="100px" alt="">
+                        </div>
+
+                        <div class="mt-4">
+                            <h6>Select list*</h6>
+                            <select name="color">
+                                <option value="">Select a color</option>
+                                <option value="red">Red</option>
+                                <option value="green">Green</option>
+                                <option value="yellow">Yellow</option>
+                                <option value="brown">Brown</option>
+                            </select>
+                        </div>
+                        <div class="mt-4">
+                            <div>
+                                <h6>Multiple choice*</h6>
+                            </div>
+                            <div style="display: flex;">
+                                <div class="newborder">XS</div>
+                                <div class="newborder">S</div>
+                                <div class="newborder">ML</div>
+                                <div class="newborder">XL</div>
+                            </div>
+                        </div>
+                        <div class="mt-4">
+                            <div>
+                                <h6>Single choice( with images)*</h6>
+                            </div>
+                            <div class="circle-container">
+                                <div class="circle circle-1"></div>
+                                <div class="circle circle-2"></div>
+                                <div class="circle circle-3"></div>
+                            </div>
+                            <div class="product mt-4 justify-content-around">
+                                <div class="quantity">
+                                    <button>-</button>
+                                    <input type="text" value="1">
+                                    <button>+</button>
+                                </div>
+                                <button class="add-to-cart"><i class="fa-solid fa-cart-shopping"></i>
+                                    &nbsp;&nbsp;&nbsp;&nbsp;Add to Cart</button>
+                                <div>
+                                    <button class="buy-now"> $ &nbsp;&nbsp;&nbsp;Buy Now</button>
+                                    <button class="question-mark">?</button>
+                                </div>
+                            </div>
+                            <div class="mt-4" style="display: flex;">
+                                <div>
+                                    <p><i class="fa-solid fa-heart"></i> &nbsp; Add to Wishlist&nbsp;&nbsp;&nbsp;&nbsp;
+                                    </p>
+                                </div>
+                                <div><span><i class="fa-solid fa-right-left"></i> &nbsp;Compare this Product</span>
+                                </div>
+                            </div>
+
+                            <div class="mt-2" style="display: flex;">
+                                <div><i class="fa-brands fa-facebook"></i>&nbsp;&nbsp;</div>
+                                <div><i class="fa-brands fa-twitter"></i>&nbsp;&nbsp;</i></div>
+                                <div> <i class="fa-brands fa-pinterest"></i>&nbsp;&nbsp;</i></div>
+                                <div><i class="fa-solid fa-envelope"></i></div>
+                                <div>&nbsp;&nbsp;+90</div>
+                            </div>
+                        </div>
+                    </div>
+
+
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    </div>
+    </div>
+
+    <script src="main.js"></script>
+
+    <!-- content fetch json for review,specification.............. -->
+
+    <script>
+
+
+
+
+        const params = new URLSearchParams(window.location.search);
+        const productId = Number(params.get("id"));
+        console.log(productId);
+        let home_products = document.getElementById("home_products");
+        let main_img_box = document.getElementById('main-img');
+        let img_choose = document.getElementById('img-choose-js');
+        console.log(img_choose);
+
+        fetch('first.json')
+            .then((response) => response.json())
+            .then((data) => {
+
+                let promatch = data.products.find(product => product.id === productId);
+                main_img_box.innerHTML = `<img src = "${promatch.img}" id="mainimg">`;
+
+                img_choose.innerHTML = ` 
+                <div class="mt-2"><img src="${promatch.chooseimg[0]}" onclick = "showimg('${promatch.chooseimg[0]}')" width="80" height="80"></div>
+        <div class="mt-2"><img src="${promatch.chooseimg[2]}" onclick = "showimg('${promatch.chooseimg[2]}')" width="80" height="80"></div>
+
+        <div class="mt-2"><img src="${promatch.chooseimg[1]}" onclick = "showimg('${promatch.chooseimg[1]}')" width="80" height="80"></div>
+        <div class="mt-2"><img src="${promatch.chooseimg[2]}" onclick = "showimg('${promatch.chooseimg[2]}')" width="80" height="80"></div>`
+            });
+
+
+        // main -image show onclick
+        function showimg(url) {
+            document.getElementById('mainimg').src = url;
+        }
+    </script>
+
+
+
+<div class="most-viewed container-fluid mt-4">
+    <div class="row">
+        <div class="col-md-3 d-flex  justify-content-center">
+
+            <div class="images">
+                <img src="assets/fashion.jpeg" height="120px" width="100px" />
+            </div>
+            <div class="name">
+                <p>Oversized Sunglasses For Lon...<br>$397.00</p>
+                <p><i class="fa-solid fa-shopping-cart"></i> <i class="fa  fa-heart-circle-plus"></i> <i
+                        class="fa-solid fa-arrow-right-arrow-left"></i></p>
+            </div>
+        </div>
+
+        <div class=" col-md-3 d-flex justify-content-center">
+
+            <div class="images">
+                <img src="assets/footwear.jpeg" height="120px" width="100px" />
+            </div>
+            <div class="name">
+                <p>Oversized Sunglasses For Lon...<br>$397.00</p>
+                <p><i class="fa-solid fa fa-shopping-cart"></i> <i class="fa  fa-heart-circle-plus"></i> <i
+                        class="fa-solid fa-arrow-right-arrow-left"></i></p>
+            </div>
+        </div>
+        <div class=" col-md-3 d-flex justify-content-center">
+
+            <div class="images">
+                <img src="assets/bags.jpg" height="120px" width="100px" />
+            </div>
+            <div class="name">
+                <p>Oversized Sunglasses For Lon...<br>$397.00</p>
+                <p><i class="fa-solid fa-shopping-cart"></i> <i class="fa  fa-heart-circle-plus"></i></i> <i
+                        class="fa-solid fa-arrow-right-arrow-left"></i></p>
+            </div>
+        </div>
+        <div class="col-md-3 d-flex justify-content-center">
+
+            <div class="images">
+                <img src="assets/beauty.jpg" height="120px" width="100px" />
+            </div>
+            <div class="name">
+                <p>Oversized Sunglasses For Lon...<br>$397.00</p>
+                <p><i class="fa-solid fa-shopping-cart"></i> <i class="fa  fa-heart-circle-plus"></i><i
+                        class="fa-solid fa-arrow-right-arrow-left"></i></p>
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+<section>
+<div class="social-media-icons container">
+    <p>
+        <a href="#"><i class="fa-brands fa-facebook"></i></a>
+        <a href="#"><i class="fa-brands fa-twitter"></i></a>
+        <a href="#"><i class="fa-brands fa-instagram"></i></a>
+        <a href="#"> <i class="fa-brands fa-linkedin"></i></a>
+        <a href="#"> <i class="fa-brands fa-youtube"></i></a>
+        <a href="#"> <i class="fa-brands fa-skype"></i></a>
+        <a href="#"> <i class="fa-brands fa-google-plus-g"></i></a>
+
+    </p>
+</div>
+</section>
+
+
+<footer class="container">
+<div class="row d-flex ">
+    <div class="col-md-3 footcls ">
+        <h2>About Us</h2>
+        <hr>
+        <ul>
+            <li><a href="#">About Us</a></li>
+            <li><a href="#">Delivery</a></li>
+            <li><a href="#">Privacy Policy</a></li>
+            <li><a href="#">Terms & Condition</a></li>
+            <li><a href="#">Custom Links</a></li>
+        </ul>
+    </div>
+
+
+    <div class="col-md-3 footcls">
+        <h2>Customer Service</h2>
+        <hr>
+        <ul>
+            <li><a href="#">Contact</a></li>
+            <li><a href="#">Returns</a></li>
+            <li><a href="#">Site Map</a></li>
+            <li><a href="#">Brands</a></li>
+            <li><a href="#">Unlimited Links</a></li>
+        </ul>
+    </div>
+
+
+
+    <div class="col-md-3 footcls">
+        <h2>My Account</h2>
+        <hr>
+        <ul>
+            <li><a href="#">My Account</a></li>
+            <li><a href="#">Order History</a></li>
+            <li><a href="#">Affiliats</a></li>
+            <li><a href="#">Newslatter</a></li>
+            <li><a href="#">Gifts Certificates</a></li>
+        </ul>
+    </div>
+
+    <div class="col-md-3 footcls">
+        <h2>Newsletter</h2>
+        <hr>
+        <p class="para">Stay up to date with news and promotions by signing up for promotions</p>
+
+        <div class="input-container"> <input type="email" placeholder="Your email">
+            <button id="send"><i class="fa-regular fa-envelope"></i> Send</button>
+        </div>
+        <p> <input type="checkbox" name="" id=""> I have read and aggry to the <a href="#">Privacy
+                Policy</a>
+        </p>
+    </div>
+
+</div>
+
+
+</footer>
+
+<!-- copyright section -->
+<div class="container-fluid mt-4 copyrightcls">
+<div class="row comm-padding">
+    <div class="col-md-8 para">
+        <h4 class="copy-store">Copyright © 2014,Your Store </h4>
+    </div>
+    <div class="col-md-4">
+        <ul class="payment">
+            <li><img src="assets/nike.png" width="100px"></li>
+            <li><img src="assets/ny.png" width="100px"></li>
+            <li><img src="assets/nike.png" width="100px"></li>
+            <li><img src="assets/ny.png" width="100px"></li>
+
+        </ul>
+    </div>
+</div>
+</div>
+
+<!-- add to cart -->
+<div class="modal" id="cartmodal" tabindex="-1">
+<div class="modal-dialog">
+    <div class="modal-content">
+        <div class="modal-header">
+            <h5 class="modal-title">Modal title</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <!-- <div class="modal-body">
+            <div class="row"></div>
+            <div class="cart-box">
+            <div>
+                <img src="assets/beauty.jpg" width="100px" height="100px" alt=""> 
+            </div>
+            <div class="cart-style"> 
+                <h5>product name</h5>
+            </div>
+            <div class="cart-style">
+                <h6>product price</h6>
+            </div>
+            <div class="cart-style">
+                <button type="button" class="btn btn-primary"><i class="fa fa-trash"  ></i></button>
+            </div>
+             <hr>
+        </div> -->
+
+        <div id="cart-element"></div>
+    </div>
+    <hr>
+</div>
+</div>
+</div>
+
+</body>
+
+</html>

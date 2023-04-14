@@ -1,0 +1,129 @@
+{
+   "products":[
+
+    {  "id":1,
+         "img":"assets-product/camera.jpg",
+          "cat": "cam",
+        "name"  : "Camera",
+        "model" : "Model 123",
+        "price" : "$999.00" ,
+        "cutprice" : "$999.00",
+        "brand" : "Erickson" ,
+        "sale" : "-40%",
+        "badge" : "Sale 50% off",
+        "specifications": {
+          "type": "Over-ear",
+          "other1": "20Hz-20kHz",
+          "other2": "32 ohms",
+          "other3": "40mm"
+        },
+        "reviews": [
+          {
+            "user": "John Doe",
+            "rating": 4,
+            "comment": "Great sound quality, comfortable to wear for long periods of time."
+          },
+          {
+            "user": "Jane Smith",
+            "rating": 5,
+            "comment": "These headphones exceeded my expectations! The noise-cancelling is amazing."
+          }
+        ],
+        "custom_tabs": [
+          {
+            "title": "Features",
+            "content": "Over-ear design, noise-cancelling, 40mm driver size"
+          },
+          {
+            "title": "Shipping",
+            "content": "Free shipping on orders over $50"
+          }
+        ],
+        "description" : "Unlimited Blocks, Tabs or Accordions with any HTML content can be assigned to any individual product or to certain groups of products, like entire categories, brands, products with specific options, attributes, price range, etc. You can indicate any criteria via the advanced product assignment mechanism and only those products matching your criteria will display the modules.",
+         "review" :" 5 star",
+          "in stock" : "true",
+        "chooseimg" : ["assets-product/headphone.jpg" ,"assets-product/g5.jpeg","assets-product/camera.jpg","assets-product/g5.jpeg"]
+    },
+    {
+        "id":2,
+        "img":"assets-product/headphone.jpg",
+        "cat": "head",
+        "name"  : "Headphones",
+        "model" : "Model 123",
+        "price" : "$100.00" ,
+        "cutprice" :"$500.00",
+        "brand" : "Erickson" ,
+        "sale" : "-30%",
+        "badge" : "Sale 70% off",
+        "description" : "Unlimited Blocks, Tabs or Accordions with any HTML content can be assigned to any individual product or to certain groups of products, like entire categories, brands, products with specific options, attributes, price range, etc. You can indicate any criteria via the advanced product assignment mechanism and only those products matching your criteria will display the modules.",
+        "review" :" 5 star",
+         "in stock" : "true",
+       "chooseimg" : ["assets-product/headphone.jpg" ,"assets-product/g5.jpeg","assets-product/camera.jpg","assets-product/g5.jpeg"]
+    },
+    { 
+        "id":3,  
+    "img":"assets-product/g5.jpeg",
+    "cat": "sho",
+        "name"  : "Shoes",
+        "model" : "Model 123",
+        "price" : "$100.00" ,
+        "cutprice" : "$10.00",
+        "brand" : "Erickson" ,
+        "sale" : "-70%",
+        "badge" : "Sale 50% off",
+        "description" : "Unlimited Blocks, Tabs or Accordions with any HTML content can be assigned to any individual product or to certain groups of products, like entire categories, brands, products with specific options, attributes, price range, etc. You can indicate any criteria via the advanced product assignment mechanism and only those products matching your criteria will display the modules.",
+        "review" :" 5 star",
+         "in stock" : "true",
+       "chooseimg" : ["assets-product/headphone.jpg" ,"assets-product/g5.jpeg","assets-product/camera.jpg","assets-product/g5.jpeg"]
+    },
+    {
+        "id":4,
+        "img":"assets-product/headphone.jpg",
+        "cat": "head",
+        "name"  : "Headphones",
+        "model" : "Model 123",
+        "price" : "$100.00" ,
+        "cutprice" :"$500.00",
+        "brand" : "Erickson" ,
+        "sale" : "-30%",
+        "badge" : "Sale 70% off",
+        "description" : "Unlimited Blocks, Tabs or Accordions with any HTML content can be assigned to any individual product or to certain groups of products, like entire categories, brands, products with specific options, attributes, price range, etc. You can indicate any criteria via the advanced product assignment mechanism and only those products matching your criteria will display the modules.",
+        "review" :" 5 star",
+         "in stock" : "true",
+       "chooseimg" : ["assets-product/headphone.jpg" ,"assets-product/g5.jpeg","assets-product/camera.jpg","assets-product/g5.jpeg"]
+    },
+    {
+        "id":5,
+      "img":"assets-product/camera.jpg",
+      "cat": "cam",
+      "name"  : "Camera",
+      "model" : "Model 123",
+      "price" : "$100.00" ,
+      "cutprice" :"$500.00",
+      "brand" : "Erickson" ,
+      "sale" : "-40%",
+      "badge" : "Sale 70% off",
+      "description" : "Unlimited Blocks, Tabs or Accordions with any HTML content can be assigned to any individual product or to certain groups of products, like entire categories, brands, products with specific options, attributes, price range, etc. You can indicate any criteria via the advanced product assignment mechanism and only those products matching your criteria will display the modules.",
+      "review" :" 5 star",
+       "in stock" : "true",
+     "chooseimg" : ["assets-product/headphone.jpg" ,"assets-product/g5.jpeg","assets-product/camera.jpg","assets-product/g5.jpeg"]
+  },
+  { 
+        "id":6,  
+    "img":"assets-product/g5.jpeg",
+    "cat": "sho",
+        "name"  : "shoesstyle",
+        "model" : "Model 123",
+        "price" : "$100.00" ,
+        "cutprice" : "$10.00",
+        "brand" : "Erickson" ,
+        "sale" : "-70%",
+        "badge" : "Sale 50% off",
+        "description" : "Unlimited Blocks, Tabs or Accordions with any HTML content can be assigned to any individual product or to certain groups of products, like entire categories, brands, products with specific options, attributes, price range, etc. You can indicate any criteria via the advanced product assignment mechanism and only those products matching your criteria will display the modules.",
+        "review" :" 5 star",
+         "in stock" : "true",
+       "chooseimg" : ["assets-product/headphone.jpg" ,"assets-product/g5.jpeg","assets-product/camera.jpg","assets-product/g5.jpeg"]
+    }
+    
+   ]
+}
