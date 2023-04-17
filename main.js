@@ -473,7 +473,7 @@ fetch("first.json")
 
 }
 
-display1("beauty1");
+display1("electronics1");
 
 
 let elect1 = document.querySelectorAll(".categories1");
