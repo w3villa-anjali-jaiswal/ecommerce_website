@@ -267,8 +267,7 @@
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="#">
-                                <i class="far fa-heart" onclick="document.getElementById('id02').style.display='block'"
-                                    class="w3-button"></i>
+                                <div class="far fa-heart" data-bs-toggle="modal" data-bs-target="#id02"></div>
                                 <h6>Wishlist</h6>
                             </a>
                         </li>
@@ -304,9 +303,8 @@
     <div class="container-fluid department top-nav ">
         <div class="row ">
             <div class="sale">sale</div>
-            <div class="col-md-2 dep text-center">
-
-                <i class="fa-solid fa-bars"></i> all department
+            <div class="col-md-2 dep text-center dropdown">
+                 <i class="fa-solid fa-bars"></i> all department
             </div>
             <div class="new">new</div>
             <div class="col-md-5 nav  multi">
@@ -398,15 +396,66 @@
 
 
             <div class=" col-md-9 mt-4 hide-sec1">
-              
-                    <div class="input-field d-flex justify-content-around ">
-                        <div class="inputs">
-                            <input type="text" name="search" value="camera" placeholder="Keywords" id="input-search"
-                                class="form-control">
+
+                <div class="input-field d-flex justify-content-around ">
+                    <div class="inputs">
+                        <input type="text" name="search" value="camera" placeholder="Keywords" id="input-search"
+                            class="form-control">
+                    </div>
+                    <div class="dropdown ml-4">
+                        <select class="select">
+                            <option>All</option>
+                            <option>Option 1</option>
+                            <option>Option 2</option>
+                            <option>Option 3</option>
+                            <option>Option 4</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="checkbox">
+                    <label class="checkbox-inline">
+                        <input type="checkbox" name="sub_category" value="1" disabled="">
+                        Search in subcategories</label>
+                </div>
+                <div class="checkbox2">
+
+                    <label class="checkbox-inline">
+                        <input type="checkbox" name="sub_category" value="1" disabled="">
+                        Search in Product description</label>
+                </div>
+                <div class="search-btn">
+                    <button>Search</button>
+                </div>
+                <h3>Products meeting the search criteria</h3>
+                <hr>
+                <div class="d-flex justify-content-around">
+                    <div class="d-flex justify-content-around">
+                        <i class="fas fa-th" style="font-size: 25px;"></i>&nbsp; &nbsp; <i class="fas fa-list fa"
+                            style="font-size: 25px;"></i> &nbsp; &nbsp;
+                        <i class="fa-solid fa-arrow-right-arrow-left compare" style="font-size: 20px;"></i>
+                        &nbsp;&nbsp;<p style="color: blue; font-size: 25px;"> Product compare</p>
+                    </div>
+                    <div class="d-flex mt-2   justify-content-around">
+                        <div class="dropdown">
+                            <label
+                                style="background-color: lightgray; border: 1px solid lightgray; border-radius: 3px; padding: 1px;">Sort
+                                By: </label>
+                            <select style="width: 8vw;">
+                                <option>Default</option>
+                                <option>Option 1</option>
+                                <option>Option 2</option>
+                                <option>Option 3</option>
+                                <option>Option 4</option>
+                            </select>
                         </div>
-                        <div class="dropdown ml-4">
-                            <select class="select">
-                                <option>All</option>
+                        &nbsp;
+                        <div class="dropdown justify-content-between ">
+                            <label
+                                style="background-color: lightgray; border: 1px solid lightgray; border-radius: 3px; padding: 1px;">Show:
+                            </label>
+
+                            <select>
+                                <option>12</option>
                                 <option>Option 1</option>
                                 <option>Option 2</option>
                                 <option>Option 3</option>
@@ -414,602 +463,570 @@
                             </select>
                         </div>
                     </div>
-                    <div class="checkbox">
-                        <label class="checkbox-inline">
-                            <input type="checkbox" name="sub_category" value="1" disabled="">
-                            Search in subcategories</label>
-                    </div>
-                    <div class="checkbox2">
-
-                        <label class="checkbox-inline">
-                            <input type="checkbox" name="sub_category" value="1" disabled="">
-                            Search in Product description</label>
-                    </div>
-                    <div class="search-btn">
-                        <button>Search</button>
-                    </div>
-                    <h3>Products meeting the search criteria</h3>
-                    <hr>
-                    <div class="d-flex justify-content-around">
-                        <div class="d-flex justify-content-around">
-                            <i class="fas fa-th" style="font-size: 25px;"></i>&nbsp; &nbsp; <i class="fas fa-list fa"
-                                style="font-size: 25px;"></i> &nbsp; &nbsp;
-                            <i class="fa-solid fa-arrow-right-arrow-left compare" style="font-size: 20px;"></i>
-                            &nbsp;&nbsp;<p style="color: blue; font-size: 25px;"> Product compare</p>
-                        </div>
-                        <div class="d-flex mt-2   justify-content-around">
-                            <div class="dropdown">
-                                <label
-                                    style="background-color: lightgray; border: 1px solid lightgray; border-radius: 3px; padding: 1px;">Sort By: </label>
-                                <select style="width: 8vw;">
-                                    <option>Default</option>
-                                    <option>Option 1</option>
-                                    <option>Option 2</option>
-                                    <option>Option 3</option>
-                                    <option>Option 4</option>
-                                </select>
-                            </div>
-                            &nbsp;
-                            <div class="dropdown justify-content-between ">
-                                <label
-                                    style="background-color: lightgray; border: 1px solid lightgray; border-radius: 3px; padding: 1px;">Show:
-                                </label>
-
-                                <select>
-                                    <option>12</option>
-                                    <option>Option 1</option>
-                                    <option>Option 2</option>
-                                    <option>Option 3</option>
-                                    <option>Option 4</option>
-                                </select>
-                            </div>
-                        </div>
-                    </div>
-                    <hr>
                 </div>
-                <div class="col-md-9  search-section  d-flex" id="search-item-wrap">
-
-                </div>
+                <hr>
             </div>
+            <div class="col-md-9  search-section  d-flex" id="search-item-wrap">
 
-
-
-
+            </div>
         </div>
 
 
 
 
+    </div>
 
 
-        <!-- *********************** CARAOUSAL SECTION ************************ -->
 
-        <div class="hide-sec">
 
-            <div class="car-container  container-fluid comm-padding">
-                <div class="row">
-                    <div class="col-md-8 color">
-                        <div class="container1">
-                            <div class="slider">
-                                <div class="slide slide1">
-                                    <div class="caption">
-                                        <button type="button" class="btn btn-primary"
-                                            style="--bs-btn-padding-y: .35rem; --bs-btn-padding-x: .5rem; --bs-btn-font-size: .95rem;">
-                                            watch
-                                        </button>
 
-                                        <h1>Best Watch options at any resolution</h1>
-                                        <div class="learn-more">
-                                            <p>learn more</p>
-                                        </div>
 
+    <!-- *********************** CARAOUSAL SECTION ************************ -->
+
+    <div class="hide-sec">
+
+        <div class="car-container  container-fluid comm-padding">
+            <div class="row">
+                <div class="col-md-8 color">
+                    <div class="container1">
+                        <div class="slider">
+                            <div class="slide slide1">
+                                <div class="caption">
+                                    <button type="button" class="btn btn-primary"
+                                        style="--bs-btn-padding-y: .35rem; --bs-btn-padding-x: .5rem; --bs-btn-font-size: .95rem;">
+                                        watch
+                                    </button>
+
+                                    <h1>Best Watch options at any resolution</h1>
+                                    <div class="learn-more">
+                                        <p>learn more</p>
+                                    </div>
+
+                                </div>
+                            </div>
+                            <div class="slide slide2">
+
+                                <div class="caption">
+
+                                    <button type="button" class="btn btn-primary"
+                                        style="--bs-btn-padding-y: .35rem; --bs-btn-padding-x: .5rem; --bs-btn-font-size: .95rem;">
+                                        watch
+                                    </button>
+
+                                    <h1>Best Watch options at any resolution</h1>
+                                    <div class="learn-more">
+                                        <p>learn more</p>
                                     </div>
                                 </div>
-                                <div class="slide slide2">
+                            </div>
+                            <div class="slide slide3">
+                                <div class="caption">
 
-                                    <div class="caption">
+                                    <button type="button" class="btn btn-primary"
+                                        style="--bs-btn-padding-y: .35rem; --bs-btn-padding-x: .5rem; --bs-btn-font-size: .95rem;">
+                                        watch
+                                    </button>
 
-                                        <button type="button" class="btn btn-primary"
-                                            style="--bs-btn-padding-y: .35rem; --bs-btn-padding-x: .5rem; --bs-btn-font-size: .95rem;">
-                                            watch
-                                        </button>
-
-                                        <h1>Best Watch options at any resolution</h1>
-                                        <div class="learn-more">
-                                            <p>learn more</p>
-                                        </div>
+                                    <h1>Best Watch options at any resolution</h1>
+                                    <div class="learn-more">
+                                        <p>learn more</p>
                                     </div>
                                 </div>
-                                <div class="slide slide3">
-                                    <div class="caption">
+                            </div>
 
-                                        <button type="button" class="btn btn-primary"
-                                            style="--bs-btn-padding-y: .35rem; --bs-btn-padding-x: .5rem; --bs-btn-font-size: .95rem;">
-                                            watch
-                                        </button>
+                            <div class="slide slide1">
+                                <div class="caption">
 
-                                        <h1>Best Watch options at any resolution</h1>
-                                        <div class="learn-more">
-                                            <p>learn more</p>
-                                        </div>
+                                    <button type="button" class="btn btn-primary"
+                                        style="--bs-btn-padding-y: .35rem; --bs-btn-padding-x: .5rem; --bs-btn-font-size: .95rem;">
+                                        watch
+                                    </button>
+
+                                    <h1>Best Watch options at any resolution</h1>
+                                    <div class="learn-more ">
+                                        <p>learn more</p>
                                     </div>
                                 </div>
-
-                                <div class="slide slide1">
-                                    <div class="caption">
-
-                                        <button type="button" class="btn btn-primary"
-                                            style="--bs-btn-padding-y: .35rem; --bs-btn-padding-x: .5rem; --bs-btn-font-size: .95rem;">
-                                            watch
-                                        </button>
-
-                                        <h1>Best Watch options at any resolution</h1>
-                                        <div class="learn-more ">
-                                            <p>learn more</p>
-                                        </div>
-                                    </div>
-                                </div>
-
                             </div>
 
                         </div>
 
                     </div>
-                    <div class="col-md-4">
-                        <div class="car-container">
-                            <div class="slidee slide1">
-                                <div class="caption row d-flex">
-                                    <div class="col-md-6 ">
-                                        <h1 id="wear"> wearables</h1>
-                                        <p id="intelligent">Intelligent & Durable Design</p>
-                                    </div>
 
-                                    <div class="col-md-6">
-                                        <img src="assets/computer.png" alt="">
-                                    </div>
-
-
+                </div>
+                <div class="col-md-4">
+                    <div class="car-container">
+                        <div class="slidee slide1">
+                            <div class="caption row d-flex">
+                                <div class="col-md-6 ">
+                                    <h1 id="wear"> wearables</h1>
+                                    <p id="intelligent">Intelligent & Durable Design</p>
                                 </div>
+
+                                <div class="col-md-6">
+                                    <img src="assets/computer.png" alt="">
+                                </div>
+
+
                             </div>
-                            <div class="slidee slide2">
-                                <div class="caption row">
-                                    <div class="col-md-5">
-                                        <h1 id="wear">computer</h1>
-                                        <p id="intelligent">Intelligent & Durable Design</p>
-                                    </div>
-                                    <div class="col-md-7">
-                                        <img src="assets/watch.png" alt="">
-                                    </div>
+                        </div>
+                        <div class="slidee slide2">
+                            <div class="caption row">
+                                <div class="col-md-5">
+                                    <h1 id="wear">computer</h1>
+                                    <p id="intelligent">Intelligent & Durable Design</p>
+                                </div>
+                                <div class="col-md-7">
+                                    <img src="assets/watch.png" alt="">
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
+        </div>
 
 
-            <section>
-                <!-- 1.Free shiping  -->
-                <div class="container-fluid text-center shipping">
-                    <div class="free-shiping-container row">
-                        <div class="col-md-3">
-                            <div class="icon-container">
-                                <div class="icon">
-                                    <i class="fa-solid fa-truck-fast"></i>
-                                </div>
+        <section>
+            <!-- 1.Free shiping  -->
+            <div class="container-fluid text-center shipping">
+                <div class="free-shiping-container row">
+                    <div class="col-md-3">
+                        <div class="icon-container">
+                            <div class="icon">
+                                <i class="fa-solid fa-truck-fast"></i>
+                            </div>
 
-                                <div class="text">
-                                    <h2>Free Shipping</h2>
-                                    <p>Free delivery over $100</p>
-                                </div>
+                            <div class="text">
+                                <h2>Free Shipping</h2>
+                                <p>Free delivery over $100</p>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <!-- 2.Free returns  -->
+
+
+                    <div class="col-md-3">
+                        <div class="icon-container">
+                            <div class="icon">
+                                <i class="fa-solid fa-arrow-rotate-left"></i>
+                            </div>
+                            <div class="text">
+                                <h2>Free Shipping</h2>
+                                <p>Free delivery over $100</p>
                             </div>
                         </div>
 
+                    </div>
 
-                        <!-- 2.Free returns  -->
+                    <!-- 3.Secure shoping -->
 
 
-                        <div class="col-md-3">
-                            <div class="icon-container">
-                                <div class="icon">
-                                    <i class="fa-solid fa-arrow-rotate-left"></i>
-                                </div>
-                                <div class="text">
-                                    <h2>Free Shipping</h2>
-                                    <p>Free delivery over $100</p>
-                                </div>
+                    <div class="col-md-3">
+                        <div class="icon-container">
+                            <div class="icon">
+                                <i class="fa-solid fa-shield-halved"></i>
                             </div>
 
-                        </div>
-
-                        <!-- 3.Secure shoping -->
-
-
-                        <div class="col-md-3">
-                            <div class="icon-container">
-                                <div class="icon">
-                                    <i class="fa-solid fa-shield-halved"></i>
-                                </div>
-
-                                <div class="text">
-                                    <h2>Free Shipping</h2>
-                                    <p>Free delivery over $100</p>
-                                </div>
+                            <div class="text">
+                                <h2>Free Shipping</h2>
+                                <p>Free delivery over $100</p>
                             </div>
                         </div>
+                    </div>
 
-                        <!-- 4.Unlimited Blocks -->
+                    <!-- 4.Unlimited Blocks -->
 
 
-                        <div class="col-md-3">
-                            <div class="icon-container">
-                                <div class="icon">
-                                    <i class="fa-solid fa-cube"></i>
-                                </div>
+                    <div class="col-md-3">
+                        <div class="icon-container">
+                            <div class="icon">
+                                <i class="fa-solid fa-cube"></i>
+                            </div>
 
-                                <div class="text">
-                                    <h2>Free Shipping</h2>
-                                    <p>Free delivery over $100</p>
-                                </div>
+                            <div class="text">
+                                <h2>Free Shipping</h2>
+                                <p>Free delivery over $100</p>
                             </div>
                         </div>
                     </div>
                 </div>
-            </section>
+            </div>
+        </section>
 
 
-            <section>
-                <div class="container-fluid text-center why-buy ">
-                    <h1>why buy from us ?</h1>
-                    <p class="para">Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima doloremque nesciunt
-                        iure
-                        quasi maiores
-                        perferendis
-                        iste labore inventore numquam itaque!</p>
-                    <p class="para">Lorem ipsum, dolor sit amet consectetur adipisicing <a href="#">learn more</a></p>
+        <section>
+            <div class="container-fluid text-center why-buy ">
+                <h1>why buy from us ?</h1>
+                <p class="para">Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima doloremque nesciunt
+                    iure
+                    quasi maiores
+                    perferendis
+                    iste labore inventore numquam itaque!</p>
+                <p class="para">Lorem ipsum, dolor sit amet consectetur adipisicing <a href="#">learn more</a></p>
 
-                    <div class="categories-navigation-container">
-                        <a>
-                            <p class="active-why-buy">
-                                top categories
-                            </p>
-                        </a>
-
-                        <a>
-                            <p>electronics</p>
-                        </a>
-                        <a>
-                            <p>beauty</p>
-                        </a>
-                        <a>
-                            <p>fashion</p>
-                        </a>
-                    </div>
-
-                    <div class="container-fluid text-center comm-padding">
-                        <div id="product-list-3" class="d-flex">
-
-                        </div>
-
-
-                    </div>
-                </div>
-            </section>
-
-            <section>
-
-
-
-                <div class="container text-center">
-                    <h1>Feature Product</h1>
-                    <p class="para">Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima doloremque nesciunt
-                        iure
-                        quasi maiores
-                        perferendis
-                        iste labore inventore numquam itaque!</p>
-                    <p class="para">Lorem ipsum, dolor sit amet consectetur adipisicing <a href="#">learn more</a></p>
-
-                </div>
-                <div class="categories-navigation-container">
+                <div class="categories-navigation-container" id="categories1">
                     <a>
-                        <p class="active-why-buy">
+                        <p class="categories active-why-buy">
                             top categories
                         </p>
                     </a>
 
                     <a>
-                        <p>electronics</p>
+                        <p class="categories">electronics</p>
                     </a>
                     <a>
-                        <p>beauty</p>
+                        <p class="categories">beauty</p>
                     </a>
                     <a>
-                        <p>fashion</p>
+                        <p class="categories">fashion</p>
                     </a>
                 </div>
 
-                <div class="container-fluid comm-padding" id="product">
-                    <div class="text-center">
-                        <h2 class="display-7">PRODUCTS</h2>
-                    </div>
-                    <div class="row d-flex">
-                        <ul id="home_products" class="d-flex">
+                <div class="container-fluid text-center comm-padding">
+                    <div id="product-list-3" class="d-flex">
 
-                        </ul>
                     </div>
+
 
                 </div>
-                <script src="main.js"></script>
+            </div>
+        </section>
 
-
-                <section>
-
-                    <div class="container-fluid text-center comm-padding ">
-                        <h1>featured category</h1>
-                        <p class="para">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Magni laboriosam
-                            accusantium
-                            provident quod
-                            voluptas? Natus earum quasi labore quidem vel?</p>
-                        <p class="para">Lorem ipsum dolor, sit amet consectetur adipisicing elit.</p>
-                        <div id="home_products_2" class="d-flex">
-
-                        </div>
-                    </div>
-
-                </section>
-
-                <section>
-                    <div class="container-fluid  text-center ">
-                        <h1> shop by brands </h1>
-                        <div class="row cus-row">
-                            <div class="col-md-2  cus-card">
-
-                                <img src="assets/sony_logo_PNG3.png" alt="...">
-
-                            </div>
-                            <div class="col-md-2 cus-card">
-
-                                <img src="assets/carrera.png" alt="...">
-
-                            </div>
-                            <div class="col-md-2 cus-card">
-
-                                <img src="assets/nike.png" alt="...">
-
-                            </div>
-                            <div class="col-md-2 cus-card">
-
-                                <img src="assets/ny.png" alt="...">
-
-                            </div>
-                            <div class="col-md-2 cus-card">
-
-                                <img src="assets/sony_logo_PNG3.png" alt="...">
-
-                            </div>
-                            <div class="col-md-2 cus-card">
-
-                                <img src="assets/sony_logo_PNG3.png" alt="...">
-                            </div>
-                        </div>
-
-                    </div>
-
-                </section>
-            </section>
+        <section>
 
 
 
+            <div class="container text-center">
+                <h1>Feature Product</h1>
+                <p class="para">Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima doloremque nesciunt
+                    iure
+                    quasi maiores
+                    perferendis
+                    iste labore inventore numquam itaque!</p>
+                <p class="para">Lorem ipsum, dolor sit amet consectetur adipisicing <a href="#">learn more</a></p>
 
-            <section class="improved-gallery why-buy-from-us left-right-margin">
-                <div class="why-buy-text">
-                    <h1>Improved Gallery Module</h1>
-                    <hr />
-                    <p>
-                        The gallery module supports images Lorem ipsum dolor sit amet
-                        consectetur adipisicing elit. Iure fugit nostrum nisi reprehenderit,
-                        repudiandae quas praesentium in expedita tenetur voluptatem voluptas
-                        magni! Sequi aliquid nobis, amet voluptates ratione totam accusantium?
+            </div>
+            <div class="categories-navigation-container" id="categories2">
+                <a>
+                    <p class="categories1 active-why-buy" data-category="top">
+                        top categories
                     </p>
+                </a>
+
+                <a>
+                    <p class="categories1" data-category="electronics">electronics</p>
+                </a>
+                <a>
+                    <p class="categories1" data-category="beauty">beauty</p>
+                </a>
+                <a>
+                    <p class="categories1" data-category="faishon">faishon</p>
+                </a>
+            </div>
+
+            <div class="container-fluid comm-padding" id="product">
+                <div class="text-center">
+                    <h2 class="display-7">PRODUCTS</h2>
                 </div>
-                <div class="gallary-image-container">
-                    <img src="assets/g3.jpeg" alt="">
-                    <img src="assets/g8.jpeg" alt="">
-                    <img src="assets/g9.jpeg" alt="">
-                    <img src="assets/g3.jpeg" alt="">
-                    <img src="assets/g8.jpeg" alt="">
-                    <img src="assets/g9.jpeg" alt="">
-                    <img src="assets/g3.jpeg" alt="">
-                    <img src="assets/g8.jpeg" alt="">
-                    <img src="assets/g9.jpeg" alt="">
+                <div class="row d-flex" id="show1">
+                    <ul id="home_products" class="d-flex">
+
+                    </ul>
+                    <script src="main.js"></script>
                 </div>
-            </section>
+                <!-- <div class="row d-flex" id="show2" style="background-color: rgb(242, 0, 255); display:none !important;">
+                    <ul id="electronics" class="d-flex">
+
+                    </ul>
+                </div>
+                <div class="row d-flex" id="show3" style="background-color: rgb(255, 42, 0); display:none !important;">
+                    <ul id="beauty" class="d-flex">
+
+                    </ul>
+                </div>
+
+                <div class="row d-flex" id="show4" style="background-color: rgb(0, 38, 255); display:none !important;" >
+                    <ul id="faishon" class="d-flex">
+
+                    </ul>
+                </div> -->
+            </div>
+
+
+            <script src="main.js"></script>
+
+
             <section>
-                <div class="container text-center p-4">
-                    <h1>from our blog</h1>
-                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Similique expedita facilis incidunt
-                        tempora
-                        cupiditate, enim quod nisi sed. Magnam, facere.
-                    </p>
 
+                <div class="container-fluid text-center comm-padding ">
+                    <h1>featured category</h1>
+                    <p class="para">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Magni laboriosam
+                        accusantium
+                        provident quod
+                        voluptas? Natus earum quasi labore quidem vel?</p>
+                    <p class="para">Lorem ipsum dolor, sit amet consectetur adipisicing elit.</p>
+                    <div id="home_products_2" class="d-flex">
 
-                    <div class="row from-our-blog ">
-                        <div class="col-md-4 ">
-                            <div class="card h-100">
-                                <img src="assets/bags.jpg" height="400px">
-                                <div class="card-body">
-                                    <div class=" admin-icon">
-                                        <i class="fa-solid fa-user"></i>
-                                        <p>admin</p>
-                                        <i class="fa-regular fa-comment-dots"></i>
-                                        <p>38</p>
-                                        <i class="fa-solid fa-eye"></i>
-                                        <p>19340</p>
-                                    </div>
-                                    <h5 class="card-title">Another Blog post</h5>
-                                    <p class="card-text">This is a wider card with supporting text below as a
-                                        natural
-                                        lead-in to
-                                        additional content. This content is a little bit longer.</p>
-                                </div>
-
-                            </div>
-                        </div>
-                        <div class="col-md-4">
-                            <div class="card h-100">
-                                <img src="assets/bags.jpg" height="400px">
-                                <div class="card-body">
-                                    <div class=" admin-icon">
-                                        <i class="fa-solid fa-user"></i>
-                                        <p>admin</p>
-                                        <i class="fa-regular fa-comment-dots"></i>
-                                        <p>38</p>
-                                        <i class="fa-solid fa-eye"></i>
-                                        <p>19340</p>
-                                    </div>
-                                    <h5 class="card-title">Best Leather Bags</h5>
-                                    <p class="card-text">This card has supporting text below as a natural lead-in to
-                                        additional
-                                        content.</p>
-                                </div>
-
-                            </div>
-                        </div>
-                        <div class="col-md-4">
-                            <div class="card h-100">
-                                <img src="assets/bags.jpg" height="400px">
-                                <div class="card-body">
-                                    <div class=" admin-icon">
-                                        <i class="fa-solid fa-user"></i>
-                                        <p>admin</p>
-                                        <i class="fa-regular fa-comment-dots"></i>
-                                        <p>38</p>
-                                        <i class="fa-solid fa-eye"></i>
-                                        <p>19340</p>
-                                    </div>
-                                    <h5 class="card-title">Journal Blog is Here</h5>
-                                    <p class="card-text">This is a wider card with supporting text below as a
-                                        natural
-                                        lead-in to
-                                        additional content. This card has even longer content than the first to show
-                                        that
-                                        equal
-                                        height action.</p>
-                                </div>
-
-                            </div>
-                        </div>
                     </div>
                 </div>
+
             </section>
+
             <section>
-                <div class="container-fluid what-people text-center p-4 ">
-                    <h1>what people are saying about us?</h1>
-                    <div class="row text-center">
-                        <div class="col-md-4">
-                            <div class="content">
-                                <div class="quote-icon p-4">
-                                    <i class="fa-solid fa-quote-left "></i>
-                                </div>
-                                <p>
-                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem dicta vero vitae
-                                    mollitia
-                                    quasi a
-                                    numquam inventore consectetur amet nobis.</p>
-                            </div>
-                        </div>
-                        <div class="col-md-4">
-                            <div class="content">
-                                <div class="quote-icon p-4">
-                                    <i class="fa-solid fa-quote-left "></i>
-                                </div>
-                                <p>
-                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem dicta vero vitae
-                                    mollitia
-                                    quasi a
-                                    numquam inventore consectetur amet nobis.</p>
-                            </div>
-                        </div>
-                        <div class="col-md-4">
-                            <div class="content">
-                                <div class="quote-icon p-4">
-                                    <i class="fa-solid fa-quote-left "></i>
-                                </div>
-                                <p>
-                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem dicta vero vitae
-                                    mollitia
-                                    quasi a
-                                    numquam inventore consectetur amet nobis.</p>
-                            </div>
-                        </div>
+                <div class="container-fluid  text-center ">
+                    <h1> shop by brands </h1>
+                    <div class="row cus-row">
+                        <div class="col-md-2  cus-card">
 
+                            <img src="assets/sony_logo_PNG3.png" alt="...">
+
+                        </div>
+                        <div class="col-md-2 cus-card">
+
+                            <img src="assets/carrera.png" alt="...">
+
+                        </div>
+                        <div class="col-md-2 cus-card">
+
+                            <img src="assets/nike.png" alt="...">
+
+                        </div>
+                        <div class="col-md-2 cus-card">
+
+                            <img src="assets/ny.png" alt="...">
+
+                        </div>
+                        <div class="col-md-2 cus-card">
+
+                            <img src="assets/sony_logo_PNG3.png" alt="...">
+
+                        </div>
+                        <div class="col-md-2 cus-card">
+
+                            <img src="assets/sony_logo_PNG3.png" alt="...">
+                        </div>
                     </div>
 
-
                 </div>
-
 
             </section>
+        </section>
 
 
 
 
-        </div>
+        <section class="improved-gallery why-buy-from-us left-right-margin">
+            <div class="why-buy-text">
+                <h1>Improved Gallery Module</h1>
+                <hr />
+                <p>
+                    The gallery module supports images Lorem ipsum dolor sit amet
+                    consectetur adipisicing elit. Iure fugit nostrum nisi reprehenderit,
+                    repudiandae quas praesentium in expedita tenetur voluptatem voluptas
+                    magni! Sequi aliquid nobis, amet voluptates ratione totam accusantium?
+                </p>
+            </div>
+            <div class="gallary-image-container">
+                <img src="assets/g3.jpeg" alt="">
+                <img src="assets/g8.jpeg" alt="">
+                <img src="assets/g9.jpeg" alt="">
+                <img src="assets/g3.jpeg" alt="">
+                <img src="assets/g8.jpeg" alt="">
+                <img src="assets/g9.jpeg" alt="">
+                <img src="assets/g3.jpeg" alt="">
+                <img src="assets/g8.jpeg" alt="">
+                <img src="assets/g9.jpeg" alt="">
+            </div>
+        </section>
+        <section>
+            <div class="container text-center p-4">
+                <h1>from our blog</h1>
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Similique expedita facilis incidunt
+                    tempora
+                    cupiditate, enim quod nisi sed. Magnam, facere.
+                </p>
 
 
-        <!-- hide div close -->
+                <div class="row from-our-blog ">
+                    <div class="col-md-4 ">
+                        <div class="card h-100">
+                            <img src="assets/bags.jpg" height="400px">
+                            <div class="card-body">
+                                <div class=" admin-icon">
+                                    <i class="fa-solid fa-user"></i>
+                                    <p>admin</p>
+                                    <i class="fa-regular fa-comment-dots"></i>
+                                    <p>38</p>
+                                    <i class="fa-solid fa-eye"></i>
+                                    <p>19340</p>
+                                </div>
+                                <h5 class="card-title">Another Blog post</h5>
+                                <p class="card-text">This is a wider card with supporting text below as a
+                                    natural
+                                    lead-in to
+                                    additional content. This content is a little bit longer.</p>
+                            </div>
 
-
-
-        <div class="most-viewed container-fluid">
-            <div class="row">
-                <div class="col-md-3 d-flex  justify-content-center">
-
-                    <div class="images">
-                        <img src="assets/fashion.jpeg" height="120px" width="100px" />
+                        </div>
                     </div>
-                    <div class="name">
-                        <p>Oversized Sunglasses For Lon...<br>$397.00</p>
-                        <p><i class="fa-solid fa-cart-shopping"></i> <i class="fa-regular fa-heart"></i> <i
-                                class="fa-solid fa-arrow-right-arrow-left"></i></p>
-                    </div>
-                </div>
+                    <div class="col-md-4">
+                        <div class="card h-100">
+                            <img src="assets/bags.jpg" height="400px">
+                            <div class="card-body">
+                                <div class=" admin-icon">
+                                    <i class="fa-solid fa-user"></i>
+                                    <p>admin</p>
+                                    <i class="fa-regular fa-comment-dots"></i>
+                                    <p>38</p>
+                                    <i class="fa-solid fa-eye"></i>
+                                    <p>19340</p>
+                                </div>
+                                <h5 class="card-title">Best Leather Bags</h5>
+                                <p class="card-text">This card has supporting text below as a natural lead-in to
+                                    additional
+                                    content.</p>
+                            </div>
 
-                <div class=" col-md-3 d-flex justify-content-center">
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="card h-100">
+                            <img src="assets/bags.jpg" height="400px">
+                            <div class="card-body">
+                                <div class=" admin-icon">
+                                    <i class="fa-solid fa-user"></i>
+                                    <p>admin</p>
+                                    <i class="fa-regular fa-comment-dots"></i>
+                                    <p>38</p>
+                                    <i class="fa-solid fa-eye"></i>
+                                    <p>19340</p>
+                                </div>
+                                <h5 class="card-title">Journal Blog is Here</h5>
+                                <p class="card-text">This is a wider card with supporting text below as a
+                                    natural
+                                    lead-in to
+                                    additional content. This card has even longer content than the first to show
+                                    that
+                                    equal
+                                    height action.</p>
+                            </div>
 
-                    <div class="images">
-                        <img src="assets/footwear.jpeg" height="120px" width="100px" />
-                    </div>
-                    <div class="name">
-                        <p>Oversized Sunglasses For Lon...<br>$397.00</p>
-                        <p><i class="fa-solid fa-cart-shopping"></i> <i class="fa-regular fa-heart"></i> <i
-                                class="fa-solid fa-arrow-right-arrow-left"></i></p>
-                    </div>
-                </div>
-                <div class=" col-md-3 d-flex justify-content-center">
-
-                    <div class="images">
-                        <img src="assets/bags.jpg" height="120px" width="100px" />
-                    </div>
-                    <div class="name">
-                        <p>Oversized Sunglasses For Lon...<br>$397.00</p>
-                        <p><i class="fa-solid fa-cart-shopping"></i> <i class="fa-regular fa-heart"></i> <i
-                                class="fa-solid fa-arrow-right-arrow-left"></i></p>
-                    </div>
-                </div>
-                <div class="col-md-3 d-flex justify-content-center">
-
-                    <div class="images">
-                        <img src="assets/beauty.jpg" height="120px" width="100px" />
-                    </div>
-                    <div class="name">
-                        <p>Oversized Sunglasses For Lon...<br>$397.00</p>
-                        <p><i class="fa-solid fa-cart-shopping"></i> <i class="fa-regular fa-heart"></i> <i
-                                class="fa-solid fa-arrow-right-arrow-left"></i></p>
+                        </div>
                     </div>
                 </div>
             </div>
+        </section>
+        <section>
+            <div class="container-fluid what-people text-center p-4 ">
+                <h1>what people are saying about us?</h1>
+                <div class="row text-center">
+                    <div class="col-md-4">
+                        <div class="content">
+                            <div class="quote-icon p-4">
+                                <i class="fa-solid fa-quote-left "></i>
+                            </div>
+                            <p>
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem dicta vero vitae
+                                mollitia
+                                quasi a
+                                numquam inventore consectetur amet nobis.</p>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="content">
+                            <div class="quote-icon p-4">
+                                <i class="fa-solid fa-quote-left "></i>
+                            </div>
+                            <p>
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem dicta vero vitae
+                                mollitia
+                                quasi a
+                                numquam inventore consectetur amet nobis.</p>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="content">
+                            <div class="quote-icon p-4">
+                                <i class="fa-solid fa-quote-left "></i>
+                            </div>
+                            <p>
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem dicta vero vitae
+                                mollitia
+                                quasi a
+                                numquam inventore consectetur amet nobis.</p>
+                        </div>
+                    </div>
+
+                </div>
+
+
+            </div>
+
+
+        </section>
+
+
+
+
+    </div>
+
+
+    <!-- hide div close -->
+
+
+
+    <div class="most-viewed container-fluid">
+        <div class="row">
+            <div class="col-md-3 d-flex  justify-content-center">
+
+                <div class="images">
+                    <img src="assets/fashion.jpeg" height="120px" width="100px" />
+                </div>
+                <div class="name">
+                    <p>Oversized Sunglasses For Lon...<br>$397.00</p>
+                    <p><i class="fa-solid fa-cart-shopping"></i> <i class="fa-regular fa-heart"></i> <i
+                            class="fa-solid fa-arrow-right-arrow-left"></i></p>
+                </div>
+            </div>
+
+            <div class=" col-md-3 d-flex justify-content-center">
+
+                <div class="images">
+                    <img src="assets/footwear.jpeg" height="120px" width="100px" />
+                </div>
+                <div class="name">
+                    <p>Oversized Sunglasses For Lon...<br>$397.00</p>
+                    <p><i class="fa-solid fa-cart-shopping"></i> <i class="fa-regular fa-heart"></i> <i
+                            class="fa-solid fa-arrow-right-arrow-left"></i></p>
+                </div>
+            </div>
+            <div class=" col-md-3 d-flex justify-content-center">
+
+                <div class="images">
+                    <img src="assets/bags.jpg" height="120px" width="100px" />
+                </div>
+                <div class="name">
+                    <p>Oversized Sunglasses For Lon...<br>$397.00</p>
+                    <p><i class="fa-solid fa-cart-shopping"></i> <i class="fa-regular fa-heart"></i> <i
+                            class="fa-solid fa-arrow-right-arrow-left"></i></p>
+                </div>
+            </div>
+            <div class="col-md-3 d-flex justify-content-center">
+
+                <div class="images">
+                    <img src="assets/beauty.jpg" height="120px" width="100px" />
+                </div>
+                <div class="name">
+                    <p>Oversized Sunglasses For Lon...<br>$397.00</p>
+                    <p><i class="fa-solid fa-cart-shopping"></i> <i class="fa-regular fa-heart"></i> <i
+                            class="fa-solid fa-arrow-right-arrow-left"></i></p>
+                </div>
+            </div>
         </div>
+    </div>
     </div>
     <section>
         <div class="social-media-icons container">
@@ -1140,11 +1157,11 @@
 
 
     <!-- register modal -->
-    <div class="modal" id="login-modal" tabindex="-1" >
+    <div class="modal" id="login-modal" tabindex="-1">
         <div class="modal-dialog">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h5 class="modal-title">Modal title</h5>
+                    <h5 class="modal-title">REGISTER</h5>
                     <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
                 </div>
                 <div class="modal-body mx-3">
@@ -1173,7 +1190,7 @@
         </div>
     </div>
 
-    <div class="text-center" >
+    <div class="text-center">
         <a href="" class="btn btn-default btn-rounded mb-4" data-toggle="modal" data-target="#modalRegisterForm"></a>
     </div>
 
@@ -1182,15 +1199,15 @@
 
     <!-- login--modal -->
 
-    <div class="modal" id="id01" tabindex="-1" >
+    <div class="modal" id="id01" tabindex="-1">
         <div class="modal-dialog">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h5 class="modal-title">login</h5>
+                    <h5 class="modal-title">LOGIN</h5>
                     <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
                 </div>
                 <div class="modal-body mx-3">
-                   
+
                     <div class="md-form mb-5">
                         <i class="fas fa-envelope prefix grey-text"></i>
                         <input type="email" id="orangeForm-email1" class="form-control validate">
@@ -1211,7 +1228,7 @@
         </div>
     </div>
 
-    <div class="text-center" >
+    <div class="text-center">
         <a href="" class="btn btn-default btn-rounded mb-4" data-toggle="modal" data-target="#modalRegisterForm"></a>
     </div>
 
@@ -1219,30 +1236,33 @@
 
     <!-- wishlist modal -->
 
-    <div class="w3-container">
+    <div class="modal" id="id02" tabindex="-1">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">WISHLIST</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body mx-3">
 
-        <button onclick="document.getElementById('id02').style.display='block'" class="w3-button"></button>
-
-        <div id="id02" class="w3-modal">
-            <div class="w3-modal-content">
-                <header class="w3-container w3-teal">
-                    <span onclick="document.getElementById('id02').style.display='none'"
-                        class="w3-button w3-display-topright">&times;</span>
-                    <h2>wishlist</h2>
-
-                </header>
-                <div class="w3-container">
 
                     <div id="wish-element"></div>
+
+
                 </div>
 
             </div>
-
         </div>
     </div>
+
+    <div class="text-center">
+        <a href="" class="btn btn-default btn-rounded mb-4" data-toggle="modal" data-target="#modalRegisterForm"></a>
+    </div>
+
     <script src="main.js"></script>
+
+
 </body>
 
 
 </html>
-

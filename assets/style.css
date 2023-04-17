@@ -598,7 +598,9 @@ body {
     text-transform: capitalize;
 
 }
-
+/* #show1 ul{
+    display: none !important;
+} */
 .car-container .slider .slide .caption p {
     margin: 0;
     padding: 0;

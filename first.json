@@ -3,6 +3,9 @@
 
     {  "id":1,
          "img":"assets-product/camera.jpg",
+         "img_elect":"assets/cellphone.jpg",
+         "img_beauty":"assets/beauty1.jpg",
+         "img_faishon":"assets/faishon1.jpg",
           "cat": "cam",
         "name"  : "Camera",
         "model" : "Model 123",
@@ -47,6 +50,9 @@
     {
         "id":2,
         "img":"assets-product/headphone.jpg",
+        "img_elect":"assets/elect1.jpg",
+         "img_beauty":"assets/beauty2.jpg",
+         "img_faishon":"assets/faishon2.jpg",
         "cat": "head",
         "name"  : "Headphones",
         "model" : "Model 123",
@@ -63,6 +69,9 @@
     { 
         "id":3,  
     "img":"assets-product/g5.jpeg",
+    "img_elect":"assets/computer.png",
+         "img_beauty":"assets/beauty3.jpg",
+         "img_faishon":"assets/faishon3.jpg",
     "cat": "sho",
         "name"  : "Shoes",
         "model" : "Model 123",
@@ -79,6 +88,9 @@
     {
         "id":4,
         "img":"assets-product/headphone.jpg",
+        "img_elect":"assets/cellphone.jpg",
+         "img_beauty":"assets/beauty3.jpg",
+         "img_faishon":"assets/faishon4.jpg",
         "cat": "head",
         "name"  : "Headphones",
         "model" : "Model 123",
@@ -95,6 +107,9 @@
     {
         "id":5,
       "img":"assets-product/camera.jpg",
+      "img_elect":"assets/watch.png",
+      "img_beauty":"assets/beauty5.jpg",
+      "img_faishon":"assets/faishon5.jpg",
       "cat": "cam",
       "name"  : "Camera",
       "model" : "Model 123",
@@ -110,7 +125,10 @@
   },
   { 
         "id":6,  
-    "img":"assets-product/g5.jpeg",
+     "img":"assets-product/g5.jpeg",
+     "img_elect":"assets/bags.jpg",
+     "img_beauty":"assets/beauty3.jpg",
+    " img_faishon":"assets/faishon2.jpg",
     "cat": "sho",
         "name"  : "shoesstyle",
         "model" : "Model 123",

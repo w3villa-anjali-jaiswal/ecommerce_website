@@ -423,13 +423,13 @@
                 </p>
             </div>
             <strong class="pl-3">${product.name}</strong>
-            <p>${product.price} &nbsp; <s>${product.cutprice}</s></p>
-            <div class=" add mx-3 mt-3 d-block">
+            <p class="pl-3">${product.price} &nbsp; <s>${product.cutprice}</s></p>
+            <div class=" add mx-3 mt-3 justify-content-between d-flex">
                 <input type="number" class="quantity__input" value="1">
                 
                 <button type="button" onclick="addToCart(event,${product.id},'cart')" class="btn btn-danger btn-block mb-1"><small>ADD TO
                         CART</small></button>&nbsp; &nbsp; &nbsp;
-                <i class="fa-regular fa-heart mb-2 " onclick=" addToCart(event,${product.id},'wishlist')"></i> &nbsp; &nbsp;
+                   <i class="fa-regular fa-heart mb-2 " onclick=" addToCart(event,${product.id},'wishlist')"></i> &nbsp; &nbsp;
                 <i class="fa-solid fa-arrow-right-arrow-left"></i>
             </div>
             <div class="d-flex flex-row justify-content-between p-3 mid">
@@ -475,14 +475,14 @@
               </p>
           </div>
           <strong class="pl-3">${multi_p_id[i].name}</strong>
-          <p>${multi_p_id[i].price} &nbsp; <s>${multi_p_id[i].cutprice}</s></p>
-          <div class=" add mx-3 mt-3 d-block">
-              <input type="number" class="quantity__input" value="1">
+          <p class="pl-3">${multi_p_id[i].price} &nbsp; <s>${multi_p_id[i].cutprice}</s></p>
+          <div class=" add mx-3 mt-3 justify-content-between d-flex">
+            <div><input type="number" class="quantity__input" value="1"> </div>
               
-              <button type="button" onclick="addToCart(event,${multi_p_id[i].id},'cart')" class="btn btn-danger btn-block mb-1"><small>ADD TO
-                      CART</small></button>&nbsp; &nbsp; &nbsp;
-              <i class="fa-regular fa-heart mb-2 " onclick=" addToCart(event,${multi_p_id[i].id},'wishlist')"></i> &nbsp; &nbsp;
-              <i class="fa-solid fa-arrow-right-arrow-left"></i>
+            <div><button type="button" onclick="addToCart(event,${multi_p_id[i].id},'cart')" class="btn btn-danger btn-block mb-1"><small>ADD TO
+                      CART</small></button>&nbsp; &nbsp; &nbsp; </div>
+                      <div> <i class="fa-regular fa-heart mb-2 " onclick=" addToCart(event,${multi_p_id[i].id},'wishlist')"></i> &nbsp; &nbsp; </div>
+                        <div><i class="fa-solid fa-arrow-right-arrow-left"></i> </div>
           </div>
           <div class="d-flex flex-row justify-content-between p-3 mid">
               <p class="d-flex flex-column mb-1">

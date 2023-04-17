@@ -54,63 +54,112 @@ function search(event, productId) {
 
 // ================add to cart=======================
 
-fetch('first.json')
-    .then((response) => response.json())
-    .then((data) => {
-        const ul = document.getElementById("home_products");
-        for (let i = 0; i < data.products.length; i++) {
-            const product = data.products[i];
-            var li = document.createElement("li");
-            li.innerHTML = ` <div class="card position-relative m-3 " style="width:280px;">
-    <div class="badge-overlay">
-        <!-- Change Badge Position, Color, Text here-->
-        <span class="top-left badge ">${product.badge}</span>
-    </div>
-    <span
-        class="position-absolute top-10 start-100 translate-middle badge1  badge-danger">
-        ${product.sale}
-    </span>
+// fetch('first.json')
+//     .then((response) => response.json())
+//     .then((data) => {
+//        // const ul = document.getElementById("home_products");
+//         const ul = document.querySelector(".home_products");
+//         for (let i = 0; i < data.products.length; i++) {
+//             const product = data.products[i];
+//             var li = document.createElement("li");
+//             li.innerHTML = ` <div class="card position-relative m-3 " style="width:310px;">
+//     <div class="badge-overlay">
+//         <!-- Change Badge Position, Color, Text here-->
+//         <span class="top-left badge ">${product.badge}</span>
+//     </div>
+//     <span
+//         class="position-absolute top-10 start-100 translate-middle badge1  badge-danger">
+//         ${product.sale}
+//     </span>
 
-    <a href="description.html?id=${product.id}"> <img src=${product.img}  onclick="showimg(event,${product.id})" class="card-img-top" width="100%" height="300px"></a>
+//     <a href="description.html?id=${product.id}"> <img src=${product.img}  onclick="showimg(event,${product.id})" class="card-img-top" width="100%" height="300px"></a>
    
-    <div class="card-body pt-0 px-0">
-        <div class="d-flex flex-row justify-content-between p-3 mid">
-            <a class="d-flex flex-column text-muted mb-1">
-                ${product.brand}
-            </a>
-            <p class="d-flex flex-column text-muted mb-2">${product.model}
-            </p>
-        </div>
-        <strong class="pl-3">${product.name}</strong>
-        <p>${product.price} &nbsp; <s>${product.cutprice}</s></p>
-        <div class=" add mx-3 mt-3 d-block">
-            <input type="number" class="quantity__input" value="1">
-            
-            <button type="button" onclick="addToCart(event,${product.id},'cart')" class="btn btn-danger btn-block mb-1"><small>ADD TO
-                    CART</small></button>&nbsp; &nbsp; &nbsp;
-            <i class="fa-regular fa-heart mb-2 " onclick=" addToCart(event,${product.id},'wishlist')"></i> &nbsp; &nbsp;
-            <i class="fa-solid fa-arrow-right-arrow-left"></i>
-        </div>
-        <div class="d-flex flex-row justify-content-between p-3 mid">
-            <p class="d-flex flex-column mb-1">
-                <i class="fa-solid fa-dollar" style="color: lightgreen;"></i>Buy Now
-            </p>
-            <p class="d-flex flex-column mb-2"><i class="fa-solid fa-question"
-                    style="color: red;"></i>Question
-            </p>
-        </div>
-    </div>
-</div>`; if (ul) {
-                ul.appendChild(li);
-            }
-        }
-    });
+//     <div class="card-body pt-0 px-0">
+//         <div class="d-flex flex-row justify-content-between p-3 mid">
+//             <a class="d-flex flex-column text-muted mb-1">
+//                 ${product.brand}
+//             </a>
+//             <p class="d-flex flex-column text-muted mb-2">${product.model}
+//             </p>
+//         </div>
+//         <strong class="pl-3">${product.name}</strong>
+//         <p class="pl-3">${product.price} &nbsp; <s>${product.cutprice}</s></p>
+//         <div class=" add mx-3 mt-3 justify-content-between d-flex">
+//         <div>  <input type="number" class="quantity__input" value="1" style="padding-bottom: 2px; padding-top: 7px;"></div>
+//         <div>  <button type="button" onclick="addToCart(event,${product.id},'cart')" class="btn btn-danger btn-block mb-1"><small>ADD TO CART</small></button>&nbsp; &nbsp; &nbsp;</div>
+//         <div>    <i class="fa-regular fa-heart mb-2 " onclick=" addToCart(event,${product.id},'wishlist')"></i> &nbsp; &nbsp;</div>
+//         <div>    <i class="fa-solid fa-arrow-right-arrow-left"></i></div>
+//         </div>
+//         <div class="d-flex flex-row justify-content-between p-3 mid">
+//             <p class="d-flex flex-column mb-1">
+//                 <i class="fa-solid fa-dollar" style="color: lightgreen;"></i>Buy Now
+//             </p>
+//             <p class="d-flex flex-column mb-2"><i class="fa-solid fa-question"
+//                     style="color: red;"></i>Question
+//             </p>
+//         </div>
+//     </div>
+// </div> `; if (ul) {
+//                 ul.appendChild(li);
+//             }
+//         }
+//     });
 
+// fetch('first.json')
+//     .then((response) => response.json())
+//     .then((data) => {
+//        // const ul = document.getElementById("electronics");
+//         const ul = document.querySelector(".electronics");
+//         for (let i = 0; i < data.products.length; i++) {
+//             const product = data.products[i];
+//             var li = document.createElement("li");
+//             li.innerHTML = ` <div class="card position-relative m-3 " style="width:310px;">
+//     <div class="badge-overlay">
+//         <!-- Change Badge Position, Color, Text here-->
+//         <span class="top-left badge ">${product.badge}</span>
+//     </div>
+//     <span
+//         class="position-absolute top-10 start-100 translate-middle badge1  badge-danger">
+//         ${product.sale}
+//     </span>
 
-
+//     <a href="description.html?id=${product.id}"> <img src=${product.img_elect}  onclick="showimg(event,${product.id})" class="card-img-top" width="100%" height="300px"></a>
+   
+//     <div class="card-body pt-0 px-0">
+//         <div class="d-flex flex-row justify-content-between p-3 mid">
+//             <a class="d-flex flex-column text-muted mb-1">
+//                 ${product.brand}
+//             </a>
+//             <p class="d-flex flex-column text-muted mb-2">${product.model}
+//             </p>
+//         </div>
+//         <strong class="pl-3">${product.name}</strong>
+//         <p class="pl-3">${product.price} &nbsp; <s>${product.cutprice}</s></p>
+//         <div class=" add mx-3 mt-3 justify-content-between d-flex">
+//         <div>  <input type="number" class="quantity__input" value="1" style="padding-bottom: 2px; padding-top: 7px;"></div>
+//         <div>  <button type="button" onclick="addToCart(event,${product.id},'cart')" class="btn btn-danger btn-block mb-1"><small>ADD TO CART</small></button>&nbsp; &nbsp; &nbsp;</div>
+//         <div>    <i class="fa-regular fa-heart mb-2 " onclick=" addToCart(event,${product.id},'wishlist')"></i> &nbsp; &nbsp;</div>
+//         <div>    <i class="fa-solid fa-arrow-right-arrow-left"></i></div>
+//         </div>
+//         <div class="d-flex flex-row justify-content-between p-3 mid">
+//             <p class="d-flex flex-column mb-1">
+//                 <i class="fa-solid fa-dollar" style="color: lightgreen;"></i>Buy Now
+//             </p>
+//             <p class="d-flex flex-column mb-2"><i class="fa-solid fa-question"
+//                     style="color: red;"></i>Question
+//             </p>
+//         </div>
+//     </div>
+// </div> `; if (ul) {
+//                 ul.appendChild(li);
+//             }
+//         }
+//     });
 
 
 let cartItems = [];
+let wishItem = [];
+
 async function addToCart(event, productId, action) {
 
     event.preventDefault();
@@ -118,7 +167,11 @@ async function addToCart(event, productId, action) {
     const data = await response.json();
     const product = data.products.find(product => product.id === productId);
 
-
+     if( action === "wishlist" && wishItem.includes(productId))
+     {
+        alert("Already added in wishlist");
+        return;
+     }
 
 
     if (action === 'cart') {
@@ -156,10 +209,12 @@ async function addToCart(event, productId, action) {
      
       `);
     }
+    
     else {
-        console.log("wish");
+         wishItem.push(product.id)
+        console.log('wish');
         let cart = document.getElementById("wish-element");
-
+        console.log(cart);
         cart.innerHTML += `
       <br>
       <div class="cart-box">
@@ -177,8 +232,9 @@ async function addToCart(event, productId, action) {
                 </div>
  
      
-      `;
-    }
+      `;}
+    
+
 }
 
 fetch("first.json")
@@ -242,7 +298,7 @@ fetch("first.json")
             const productElement = document.createElement("div");
 
             productElement.innerHTML = `
-          <div class=" card mb-4 mt-3 text-center" style="width:280px ">
+          <div class=" card mb-4 mt-3 m-2 text-center" style="width:280px ">
        <img src=${product.img} class="card-img-top" width="100%" height="300px">
       
                
@@ -329,43 +385,339 @@ function logsubmit(event) {
 
 
 // =====================description content fetching ====================
-let myTabContent =document.getElementById('myTabContent');
+let myTabContent = document.getElementById('myTabContent');
 
 fetch('first.json')
     .then(response => response.json())
     .then(data => {
 
 
-        let myContent =document.getElementById('main-content');
-        let spec1 =document.getElementById('spec-type');
-        let spec2 =document.getElementById('spec-type1');
-        let spec3 =document.getElementById('spec-type2');
+        let myContent = document.getElementById('main-content');
+        let spec1 = document.getElementById('spec-type');
+        let spec2 = document.getElementById('spec-type1');
+        let spec3 = document.getElementById('spec-type2');
         let contact = document.getElementById('contact');
-        let custum_tab =document.getElementById('custom1');
-  console.log(contact)
+        let custum_tab = document.getElementById('custom1');
 
-        const descr= data.products[0];
+
+        const descr = data.products[0];
 
 
         for (let i = 0; i < data.products.length; i++) {
-        
-           myContent.innerHTML=`${descr.description}  hey anjali watsupp`;
-            spec1.innerHTML=`${ descr.specifications.type}`;
-            spec2.innerHTML=`${ descr.specifications.other1} `;
-            spec3.innerHTML=`${ descr.specifications.other2} `;
-           contact.innerHTML=`${descr.description}  hey anjali watsupp`
-        console.log(descr.custom_tabs)
-           custum_tab.innerText=`${descr.custom_tabs.content}  hey anjali watsupp`
-         
+
+            myContent.innerHTML = `${descr.description}`;
+            spec1.innerHTML = `${descr.specifications.type}`;
+            spec2.innerHTML = `${descr.specifications.other1} `;
+            spec3.innerHTML = `${descr.specifications.other2} `;
+            contact.innerHTML = `${descr.description}  hey anjali watsupp`
+            console.log(descr.custom_tabs)
+            custum_tab.innerText = `${descr.custom_tabs.content}  hey anjali watsupp`
+
         }
 
     })
 
 
 
+// ============categories select==================
+let elect = document.querySelectorAll(".categories");
+
+let currclick = 0;
+let preclick = null;
+let click = 0;
+for (let i = 0; i < elect.length; i++) {
+    elect[i].addEventListener("click", (e) => {
 
 
 
+        preclick = currclick;
+        currclick = i;
+        click = click + 1;
+        if (click == 1) {
+
+            elect[0].classList.remove("active-why-buy")
+        }
+        elect[i].classList.add("active-why-buy")
+
+        if (click >= 1 && preclick != currclick) {
+
+            console.log(click, currclick, preclick)
+            elect[preclick].classList.remove("active-why-buy")
+
+        }
+
+
+    })
+
+}
+
+let elect1 = document.querySelectorAll(".categories1");
 
 
 
+let currclick1 = 0;
+let preclick1 = null;
+let click1 = 0;
+for (let i = 0; i < elect.length; i++) {
+    elect1[i].addEventListener("click", (e) => {
+
+
+       
+
+        preclick1 = currclick1;
+        currclick1 = i;
+        click1 = click1 + 1;
+        if (click == 1) {
+
+            elect1[0].classList.remove("active-why-buy")
+        }
+
+        elect1[i].classList.add("active-why-buy")
+
+       let selected_category = elect1[i].getAttribute("data-category");
+    
+        display(selected_category);
+
+        if (click1 >= 1 && preclick1 != currclick1) {
+
+            console.log(click, currclick, preclick)
+            elect1[preclick1].classList.remove("active-why-buy")
+           
+        }
+
+
+    })
+
+}
+
+function display(selected_category)
+{
+    document.getElementById("home_products").innerHTML=""; 
+    switch(selected_category)
+    {
+    case "top":
+       
+fetch('first.json')
+.then((response) => response.json())
+.then((data) => {
+ const ul = document.getElementById("home_products");
+   
+    for (let i = 0; i < data.products.length; i++) {
+        const product = data.products[i];
+        var li = document.createElement("li");
+        li.innerHTML = ` <div class="card position-relative m-3 " style="width:310px;">
+<div class="badge-overlay">
+    <!-- Change Badge Position, Color, Text here-->
+    <span class="top-left badge ">${product.badge}</span>
+</div>
+<span
+    class="position-absolute top-10 start-100 translate-middle badge1  badge-danger">
+    ${product.sale}
+</span>
+
+<a href="description.html?id=${product.id}"> <img src=${product.img}  onclick="showimg(event,${product.id})" class="card-img-top" width="100%" height="300px"></a>
+
+<div class="card-body pt-0 px-0">
+    <div class="d-flex flex-row justify-content-between p-3 mid">
+        <a class="d-flex flex-column text-muted mb-1">
+            ${product.brand}
+        </a>
+        <p class="d-flex flex-column text-muted mb-2">${product.model}
+        </p>
+    </div>
+    <strong class="pl-3">${product.name}</strong>
+    <p class="pl-3">${product.price} &nbsp; <s>${product.cutprice}</s></p>
+    <div class=" add mx-3 mt-3 justify-content-between d-flex">
+    <div>  <input type="number" class="quantity__input" value="1" style="padding-bottom: 2px; padding-top: 7px;"></div>
+    <div>  <button type="button" onclick="addToCart(event,${product.id},'cart')" class="btn btn-danger btn-block mb-1"><small>ADD TO CART</small></button>&nbsp; &nbsp; &nbsp;</div>
+    <div>    <i class="fa-regular fa-heart mb-2 " onclick=" addToCart(event,${product.id},'wishlist')"></i> &nbsp; &nbsp;</div>
+    <div>    <i class="fa-solid fa-arrow-right-arrow-left"></i></div>
+    </div>
+    <div class="d-flex flex-row justify-content-between p-3 mid">
+        <p class="d-flex flex-column mb-1">
+            <i class="fa-solid fa-dollar" style="color: lightgreen;"></i>Buy Now
+        </p>
+        <p class="d-flex flex-column mb-2"><i class="fa-solid fa-question"
+                style="color: red;"></i>Question
+        </p>
+    </div>
+</div>
+</div> `; if (ul) {
+            ul.appendChild(li);
+        }
+    }
+});
+        break;
+    case "electronics":
+
+        fetch('first.json')
+        .then((response) => response.json())
+        .then((data) => {
+         const ul = document.getElementById("home_products");
+           // const ul = document.querySelector(".electronics");
+            for (let i = 0; i < data.products.length; i++) {
+                const product = data.products[i];
+                var li = document.createElement("li");
+                li.innerHTML = ` <div class="card position-relative m-3 " style="width:310px;">
+        <div class="badge-overlay">
+            <!-- Change Badge Position, Color, Text here-->
+            <span class="top-left badge ">${product.badge}</span>
+        </div>
+        <span
+            class="position-absolute top-10 start-100 translate-middle badge1  badge-danger">
+            ${product.sale}
+        </span>
+    
+        <a href="description.html?id=${product.id}"> <img src=${product.img_elect}  onclick="showimg(event,${product.id})" class="card-img-top" width="100%" height="300px"></a>
+       
+        <div class="card-body pt-0 px-0">
+            <div class="d-flex flex-row justify-content-between p-3 mid">
+                <a class="d-flex flex-column text-muted mb-1">
+                    ${product.brand}
+                </a>
+                <p class="d-flex flex-column text-muted mb-2">${product.model}
+                </p>
+            </div>
+            <strong class="pl-3">${product.name}</strong>
+            <p class="pl-3">${product.price} &nbsp; <s>${product.cutprice}</s></p>
+            <div class=" add mx-3 mt-3 justify-content-between d-flex">
+            <div>  <input type="number" class="quantity__input" value="1" style="padding-bottom: 2px; padding-top: 7px;"></div>
+            <div>  <button type="button" onclick="addToCart(event,${product.id},'cart')" class="btn btn-danger btn-block mb-1"><small>ADD TO CART</small></button>&nbsp; &nbsp; &nbsp;</div>
+            <div>    <i class="fa-regular fa-heart mb-2 " onclick=" addToCart(event,${product.id},'wishlist')"></i> &nbsp; &nbsp;</div>
+            <div>    <i class="fa-solid fa-arrow-right-arrow-left"></i></div>
+            </div>
+            <div class="d-flex flex-row justify-content-between p-3 mid">
+                <p class="d-flex flex-column mb-1">
+                    <i class="fa-solid fa-dollar" style="color: lightgreen;"></i>Buy Now
+                </p>
+                <p class="d-flex flex-column mb-2"><i class="fa-solid fa-question"
+                        style="color: red;"></i>Question
+                </p>
+            </div>
+        </div>
+    </div> `; if (ul) {
+                    ul.appendChild(li);
+                }
+            }
+        });
+        break;
+
+
+  case "beauty":
+        
+fetch('first.json')
+.then((response) => response.json())
+.then((data) => {
+    const ul = document.getElementById("home_products");
+    // const ul = document.querySelector(".beauty");
+    
+    for (let i = 0; i < data.products.length; i++) {
+        const product = data.products[i];
+        var li = document.createElement("li");
+        li.innerHTML = ` <div class="card position-relative m-3 " style="width:310px;">
+<div class="badge-overlay">
+    <!-- Change Badge Position, Color, Text here-->
+    <span class="top-left badge ">${product.badge}</span>
+</div>
+<span
+    class="position-absolute top-10 start-100 translate-middle badge1  badge-danger">
+    ${product.sale}
+</span>
+
+<a href="description.html?id=${product.id}"> <img src=${product.img_beauty}  onclick="showimg(event,${product.id})" class="card-img-top" width="100%" height="300px"></a>
+
+<div class="card-body pt-0 px-0">
+    <div class="d-flex flex-row justify-content-between p-3 mid">
+        <a class="d-flex flex-column text-muted mb-1">
+            ${product.brand}
+        </a>
+        <p class="d-flex flex-column text-muted mb-2">${product.model}
+        </p>
+    </div>
+    <strong class="pl-3">${product.name}</strong>
+    <p class="pl-3">${product.price} &nbsp; <s>${product.cutprice}</s></p>
+    <div class=" add mx-3 mt-3 justify-content-between d-flex">
+    <div>  <input type="number" class="quantity__input" value="1" style="padding-bottom: 2px; padding-top: 7px;"></div>
+    <div>  <button type="button" onclick="addToCart(event,${product.id},'cart')" class="btn btn-danger btn-block mb-1"><small>ADD TO CART</small></button>&nbsp; &nbsp; &nbsp;</div>
+    <div>    <i class="fa-regular fa-heart mb-2 " onclick=" addToCart(event,${product.id},'wishlist')"></i> &nbsp; &nbsp;</div>
+    <div>    <i class="fa-solid fa-arrow-right-arrow-left"></i></div>
+    </div>
+    <div class="d-flex flex-row justify-content-between p-3 mid">
+        <p class="d-flex flex-column mb-1">
+            <i class="fa-solid fa-dollar" style="color: lightgreen;"></i>Buy Now
+        </p>
+        <p class="d-flex flex-column mb-2"><i class="fa-solid fa-question"
+                style="color: red;"></i>Question
+        </p>
+    </div>
+</div>
+</div> `; if (ul) {
+            ul.appendChild(li);
+        }
+    }
+});
+
+case "faishon":
+
+
+fetch('first.json')
+    .then((response) => response.json())
+    .then((data) => {
+        const ul = document.getElementById("home_products");
+        
+        for (let i = 0; i < data.products.length; i++) {
+            const product = data.products[i];
+            var li = document.createElement("li");
+            li.innerHTML = ` <div class="card position-relative m-3 " style="width:310px;">
+    <div class="badge-overlay">
+        <!-- Change Badge Position, Color, Text here-->
+        <span class="top-left badge ">${product.badge}</span>
+    </div>
+    <span
+        class="position-absolute top-10 start-100 translate-middle badge1  badge-danger">
+        ${product.sale}
+    </span>
+
+    <a href="description.html?id=${product.id}"> <img src=${product.img_faishon}  onclick="showimg(event,${product.id})" class="card-img-top" width="100%" height="300px"></a>
+   
+    <div class="card-body pt-0 px-0">
+        <div class="d-flex flex-row justify-content-between p-3 mid">
+            <a class="d-flex flex-column text-muted mb-1">
+                ${product.brand}
+            </a>
+            <p class="d-flex flex-column text-muted mb-2">${product.model}
+            </p>
+        </div>
+        <strong class="pl-3">${product.name}</strong>
+        <p class="pl-3">${product.price} &nbsp; <s>${product.cutprice}</s></p>
+        <div class=" add mx-3 mt-3 justify-content-between d-flex">
+        <div>  <input type="number" class="quantity__input" value="1" style="padding-bottom: 2px; padding-top: 7px;"></div>
+        <div>  <button type="button" onclick="addToCart(event,${product.id},'cart')" class="btn btn-danger btn-block mb-1"><small>ADD TO CART</small></button>&nbsp; &nbsp; &nbsp;</div>
+        <div>    <i class="fa-regular fa-heart mb-2 " onclick=" addToCart(event,${product.id},'wishlist')"></i> &nbsp; &nbsp;</div>
+        <div>    <i class="fa-solid fa-arrow-right-arrow-left"></i></div>
+        </div>
+        <div class="d-flex flex-row justify-content-between p-3 mid">
+            <p class="d-flex flex-column mb-1">
+                <i class="fa-solid fa-dollar" style="color: lightgreen;"></i>Buy Now
+            </p>
+            <p class="d-flex flex-column mb-2"><i class="fa-solid fa-question"
+                    style="color: red;"></i>Question
+            </p>
+        </div>
+    </div>
+</div> `; if (ul) {
+                ul.appendChild(li);
+            }
+        }
+    });
+
+
+    break;
+
+    default:
+      break
+    }
+
+}
+
+display("top");
