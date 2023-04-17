@@ -299,12 +299,17 @@
         </div>
     </nav>
     <!-- NAVBAR 2 -->
-
     <div class="container-fluid department top-nav ">
         <div class="row ">
             <div class="sale">sale</div>
-            <div class="col-md-2 dep text-center dropdown">
-                 <i class="fa-solid fa-bars"></i> all department
+            <div class="col-md-2 dep text-center dropdown ">
+                <i class="fa-solid fa-bars dropbtn"></i>all department
+                
+                <div class="dropdown-content">
+                    <a href="#">shop by category</a>
+                    <a href="#">shop by brand</a>
+                    <a href="#">Link 3</a>
+                </div>
             </div>
             <div class="new">new</div>
             <div class="col-md-5 nav  multi">
@@ -669,19 +674,19 @@
 
                 <div class="categories-navigation-container" id="categories1">
                     <a>
-                        <p class="categories active-why-buy">
+                        <p class="categories " data-category="top1">
                             top categories
                         </p>
                     </a>
 
                     <a>
-                        <p class="categories">electronics</p>
+                        <p class="categories active-why-buy" data-category="electronics1">electronics</p>
                     </a>
                     <a>
-                        <p class="categories">beauty</p>
+                        <p class="categories" data-category="beauty1">beauty</p>
                     </a>
                     <a>
-                        <p class="categories">fashion</p>
+                        <p class="categories"data-category="faishon1">fashion</p>
                     </a>
                 </div>
 
@@ -731,7 +736,7 @@
                 <div class="text-center">
                     <h2 class="display-7">PRODUCTS</h2>
                 </div>
-                <div class="row d-flex" id="show1">
+                <div class="row d-flex">
                     <ul id="home_products" class="d-flex">
 
                     </ul>

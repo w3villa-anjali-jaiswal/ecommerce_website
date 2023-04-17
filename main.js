@@ -52,110 +52,7 @@ function search(event, productId) {
 
 }
 
-// ================add to cart=======================
-
-// fetch('first.json')
-//     .then((response) => response.json())
-//     .then((data) => {
-//        // const ul = document.getElementById("home_products");
-//         const ul = document.querySelector(".home_products");
-//         for (let i = 0; i < data.products.length; i++) {
-//             const product = data.products[i];
-//             var li = document.createElement("li");
-//             li.innerHTML = ` <div class="card position-relative m-3 " style="width:310px;">
-//     <div class="badge-overlay">
-//         <!-- Change Badge Position, Color, Text here-->
-//         <span class="top-left badge ">${product.badge}</span>
-//     </div>
-//     <span
-//         class="position-absolute top-10 start-100 translate-middle badge1  badge-danger">
-//         ${product.sale}
-//     </span>
-
-//     <a href="description.html?id=${product.id}"> <img src=${product.img}  onclick="showimg(event,${product.id})" class="card-img-top" width="100%" height="300px"></a>
-   
-//     <div class="card-body pt-0 px-0">
-//         <div class="d-flex flex-row justify-content-between p-3 mid">
-//             <a class="d-flex flex-column text-muted mb-1">
-//                 ${product.brand}
-//             </a>
-//             <p class="d-flex flex-column text-muted mb-2">${product.model}
-//             </p>
-//         </div>
-//         <strong class="pl-3">${product.name}</strong>
-//         <p class="pl-3">${product.price} &nbsp; <s>${product.cutprice}</s></p>
-//         <div class=" add mx-3 mt-3 justify-content-between d-flex">
-//         <div>  <input type="number" class="quantity__input" value="1" style="padding-bottom: 2px; padding-top: 7px;"></div>
-//         <div>  <button type="button" onclick="addToCart(event,${product.id},'cart')" class="btn btn-danger btn-block mb-1"><small>ADD TO CART</small></button>&nbsp; &nbsp; &nbsp;</div>
-//         <div>    <i class="fa-regular fa-heart mb-2 " onclick=" addToCart(event,${product.id},'wishlist')"></i> &nbsp; &nbsp;</div>
-//         <div>    <i class="fa-solid fa-arrow-right-arrow-left"></i></div>
-//         </div>
-//         <div class="d-flex flex-row justify-content-between p-3 mid">
-//             <p class="d-flex flex-column mb-1">
-//                 <i class="fa-solid fa-dollar" style="color: lightgreen;"></i>Buy Now
-//             </p>
-//             <p class="d-flex flex-column mb-2"><i class="fa-solid fa-question"
-//                     style="color: red;"></i>Question
-//             </p>
-//         </div>
-//     </div>
-// </div> `; if (ul) {
-//                 ul.appendChild(li);
-//             }
-//         }
-//     });
-
-// fetch('first.json')
-//     .then((response) => response.json())
-//     .then((data) => {
-//        // const ul = document.getElementById("electronics");
-//         const ul = document.querySelector(".electronics");
-//         for (let i = 0; i < data.products.length; i++) {
-//             const product = data.products[i];
-//             var li = document.createElement("li");
-//             li.innerHTML = ` <div class="card position-relative m-3 " style="width:310px;">
-//     <div class="badge-overlay">
-//         <!-- Change Badge Position, Color, Text here-->
-//         <span class="top-left badge ">${product.badge}</span>
-//     </div>
-//     <span
-//         class="position-absolute top-10 start-100 translate-middle badge1  badge-danger">
-//         ${product.sale}
-//     </span>
-
-//     <a href="description.html?id=${product.id}"> <img src=${product.img_elect}  onclick="showimg(event,${product.id})" class="card-img-top" width="100%" height="300px"></a>
-   
-//     <div class="card-body pt-0 px-0">
-//         <div class="d-flex flex-row justify-content-between p-3 mid">
-//             <a class="d-flex flex-column text-muted mb-1">
-//                 ${product.brand}
-//             </a>
-//             <p class="d-flex flex-column text-muted mb-2">${product.model}
-//             </p>
-//         </div>
-//         <strong class="pl-3">${product.name}</strong>
-//         <p class="pl-3">${product.price} &nbsp; <s>${product.cutprice}</s></p>
-//         <div class=" add mx-3 mt-3 justify-content-between d-flex">
-//         <div>  <input type="number" class="quantity__input" value="1" style="padding-bottom: 2px; padding-top: 7px;"></div>
-//         <div>  <button type="button" onclick="addToCart(event,${product.id},'cart')" class="btn btn-danger btn-block mb-1"><small>ADD TO CART</small></button>&nbsp; &nbsp; &nbsp;</div>
-//         <div>    <i class="fa-regular fa-heart mb-2 " onclick=" addToCart(event,${product.id},'wishlist')"></i> &nbsp; &nbsp;</div>
-//         <div>    <i class="fa-solid fa-arrow-right-arrow-left"></i></div>
-//         </div>
-//         <div class="d-flex flex-row justify-content-between p-3 mid">
-//             <p class="d-flex flex-column mb-1">
-//                 <i class="fa-solid fa-dollar" style="color: lightgreen;"></i>Buy Now
-//             </p>
-//             <p class="d-flex flex-column mb-2"><i class="fa-solid fa-question"
-//                     style="color: red;"></i>Question
-//             </p>
-//         </div>
-//     </div>
-// </div> `; if (ul) {
-//                 ul.appendChild(li);
-//             }
-//         }
-//     });
-
+// ================add to cart and wishlist item show through one function=======================
 
 let cartItems = [];
 let wishItem = [];
@@ -284,35 +181,6 @@ fetch("first.json")
         }
     });
 
-fetch("first.json")
-    .then(response => response.json())
-    .then(data => {
-        const productList = document.getElementById("product-list-3");
-
-        for (let i = 0; i < data.products.length; i++) {
-
-            const product = data.products[i];
-
-            // Create a new HTML element for each product and add it to the product list
-
-            const productElement = document.createElement("div");
-
-            productElement.innerHTML = `
-          <div class=" card mb-4 mt-3 m-2 text-center" style="width:280px ">
-       <img src=${product.img} class="card-img-top" width="100%" height="300px">
-      
-               
-               <button type="button" class="btn btn-seceondary btn-block  bg-info"> PRODUCT</button>
-                  
-   </div>
-     `; if (productList) {
-
-                productList.appendChild(productElement);
-            }
-        }
-    })
-    .catch(error => console.error(error));
-
 
 
 //++++++++++++++++++++++login-logout++++++++++++++++++
@@ -435,9 +303,13 @@ for (let i = 0; i < elect.length; i++) {
         click = click + 1;
         if (click == 1) {
 
-            elect[0].classList.remove("active-why-buy")
+            elect[1].classList.remove("active-why-buy")
         }
         elect[i].classList.add("active-why-buy")
+
+        let selected_category = elect[i].getAttribute("data-category");
+    
+        display1(selected_category);
 
         if (click >= 1 && preclick != currclick) {
 
@@ -450,6 +322,159 @@ for (let i = 0; i < elect.length; i++) {
     })
 
 }
+
+
+
+
+
+
+function display1(selected_category)
+{
+    document.getElementById("product-list-3").innerHTML=""; 
+    switch(selected_category)
+    {
+    case "top1":
+       console.log("top1")
+    fetch("first.json")
+    .then(response => response.json())
+    .then(data => {
+        const productList = document.getElementById("product-list-3");
+
+        for (let i = 0; i < data.products.length; i++) {
+
+            const product = data.products[i];
+
+            // Create a new HTML element for each product and add it to the product list
+
+            const productElement = document.createElement("div");
+
+            productElement.innerHTML = `
+          <div class=" card mb-4 mt-3 m-2 text-center" style="width:280px ">
+       <img src=${product.img} class="card-img-top" width="100%" height="300px">
+      
+               
+               <button type="button" class="btn btn-seceondary btn-block  bg-info"> PRODUCT</button>
+                  
+   </div>
+     `; if (productList) {
+
+                productList.appendChild(productElement);
+            }
+        }
+    })
+    .catch(error => console.error(error));
+
+        break;
+    case "electronics1":
+
+       fetch("first.json")
+    .then(response => response.json())
+    .then(data => {
+        const productList = document.getElementById("product-list-3");
+
+        for (let i = 0; i < data.products.length; i++) {
+
+            const product = data.products[i];
+
+            // Create a new HTML element for each product and add it to the product list
+
+            const productElement = document.createElement("div");
+
+            productElement.innerHTML = `
+          <div class=" card mb-4 mt-3 m-2 text-center" style="width:280px ">
+       <img src=${product.img_elect} class="card-img-top" width="100%" height="300px">
+      
+               
+               <button type="button" class="btn btn-seceondary btn-block  bg-info"> PRODUCT</button>
+                  
+   </div>
+     `; if (productList) {
+
+                productList.appendChild(productElement);
+            }
+        }
+    })
+    .catch(error => console.error(error));
+
+        break;
+
+
+  case "beauty1":
+        
+  fetch("first.json")
+  .then(response => response.json())
+  .then(data => {
+      const productList = document.getElementById("product-list-3");
+
+      for (let i = 0; i < data.products.length; i++) {
+
+          const product = data.products[i];
+
+          // Create a new HTML element for each product and add it to the product list
+
+          const productElement = document.createElement("div");
+
+          productElement.innerHTML = `
+        <div class=" card mb-4 mt-3 m-2 text-center" style="width:280px ">
+     <img src=${product.img_beauty} class="card-img-top" width="100%" height="300px">
+    
+             
+             <button type="button" class="btn btn-seceondary btn-block  bg-info"> PRODUCT</button>
+                
+ </div>
+   `; if (productList) {
+
+              productList.appendChild(productElement);
+          }
+      }
+  })
+  .catch(error => console.error(error));
+
+   break;
+case "faishon1":
+
+
+fetch("first.json")
+    .then(response => response.json())
+    .then(data => {
+        const productList = document.getElementById("product-list-3");
+
+        for (let i = 0; i < data.products.length; i++) {
+
+            const product = data.products[i];
+
+            // Create a new HTML element for each product and add it to the product list
+
+            const productElement = document.createElement("div");
+
+            productElement.innerHTML = `
+          <div class=" card mb-4 mt-3 m-2 text-center" style="width:280px ">
+       <img src=${product.img_faishon} class="card-img-top" width="100%" height="300px">
+      
+               
+               <button type="button" class="btn btn-seceondary btn-block  bg-info"> PRODUCT</button>
+                  
+   </div>
+     `; if (productList) {
+
+                productList.appendChild(productElement);
+            }
+        }
+    })
+    .catch(error => console.error(error));
+
+
+
+    break;
+
+    default:
+      break
+    }
+
+}
+
+display1("beauty1");
+
 
 let elect1 = document.querySelectorAll(".categories1");
 
